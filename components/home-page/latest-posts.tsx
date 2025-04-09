@@ -1,3 +1,5 @@
+'use client'
+
 import { clsx } from 'clsx'
 import { useState } from 'react'
 import type { Blog } from '~/.contentlayer/generated'
@@ -11,7 +13,8 @@ export function LatestPosts({
 }: {
   posts: CoreContent<Blog>[]
 }) {
-  let [view, setView] = useState<'posts'>('posts') // Removed snippets
+  let [view, setView] = useState<'posts'>('posts') // Only handle 'posts' view now
+
   return (
     <div className="space-y-4 divide-y divide-gray-200 dark:divide-gray-700 md:mt-8 md:space-y-8">
       <div className="flex items-center justify-between">

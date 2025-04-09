@@ -1,14 +1,19 @@
-import { allBlogs } from 'contentlayer/generated'
-import { Home } from '~/components/home-page'
-import { allCoreContent } from '~/utils/contentlayer'
-import { sortPosts } from '~/utils/misc'
+import { genPageMetadata } from 'app/seo'
+import type { Author } from 'contentlayer/generated'
+import { allAuthors } from 'contentlayer/generated'
+import { AuthorLayout } from '~/layouts/author-layout'
+import { coreContent } from '~/utils/contentlayer'
 
-const MAX_POSTS_DISPLAY = 5
+export let metadata = genPageMetadata({ title: 'About' })
 
-export default function HomePage() {
+export default function AboutPage() {
+  let author = allAuthors.find((p) => p.slug === 'default') as Author
+  let mainContent = coreContent(author)
+
   return (
-    <Home
-      posts={allCoreContent(sortPosts(allBlogs)).slice(0, MAX_POSTS_DISPLAY)}
-    />
+    <AuthorLayout content={mainContent}>
+      {/* TODO: MDX seems to be broken on this page, so I'm back to JSX for now */}
+      {/* <MDXLayoutRenderer code={author.body.code} /> */}
+    </AuthorLayout>
   )
 }

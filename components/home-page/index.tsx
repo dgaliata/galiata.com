@@ -11,7 +11,7 @@ import { TypedBios } from './typed-bios'
 
 export function Home({
   posts,
-  snippets,
+  //snippets,
 }: {
   posts: CoreContent<Blog>[]
   snippets: CoreContent<Snippet>[]

@@ -11,10 +11,10 @@ import type { CoreContent } from '~/types/data'
 
 export function LatestPosts({
   posts,
-  snippets,
+  //snippets,
 }: {
   posts: CoreContent<Blog>[]
-  snippets: CoreContent<Snippet>[]
+  //snippets: CoreContent<Snippet>[]
 }) {
   let [view, setView] = useState<'posts' | 'snippets'>('posts')
   return (

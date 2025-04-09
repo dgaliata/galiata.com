@@ -6,10 +6,11 @@ type BlogMetaProps = {
   date: string
   lastmod?: string
   slug: string
+  type: string  // Add 'type' back if it's necessary
   readingTime: ReturnType<typeof readingTime>
 }
 
-export function BlogMeta({ date, lastmod, slug, readingTime }: BlogMetaProps) {
+export function BlogMeta({ date, lastmod, type, slug, readingTime }: BlogMetaProps) {
   return (
     <dl>
       <dt className="sr-only">Published on</dt>
@@ -29,7 +30,8 @@ export function BlogMeta({ date, lastmod, slug, readingTime }: BlogMetaProps) {
         <span className="text-gray-300 dark:text-gray-700">/</span>
         <span>{Math.ceil(readingTime.minutes)} mins read</span>
         <span className="text-gray-300 dark:text-gray-700">/</span>
-        <ViewsCounter slug={slug} /> {/* Remove 'type' prop if not necessary */}
+        {/* Pass 'type' to ViewsCounter */}
+        <ViewsCounter type={type} slug={slug} />
       </dd>
     </dl>
   )

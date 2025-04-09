@@ -121,11 +121,6 @@ export function AuthorLayout({ children }: Props) {
                   components, adding <code>/snippets</code>, <code>/books</code>,{' '}
                   <code>/movies</code> page, etc.
                 </li>
-                {/* <li>
-                  <Twemoji emoji="inbox-tray" /> Bumping up <code>mdx-bundler</code>,{' '}
-                  <code>rehype</code>/<code>remark</code> plugins and dependencies to the latest
-                  version
-                </li> */}
               </ul>
               <p>
                 See my{' '}
@@ -186,7 +181,8 @@ export function AuthorLayout({ children }: Props) {
               </p>
               <SocialAccounts />
             </div>
-            <div>
+            {/* Removed the Support section */}
+            {/* <div>
               <h2>Support</h2>
               <p>If you appreciate my work, consider supporting me:</p>
               <div className="flex flex-col gap-4">
@@ -230,7 +226,7 @@ export function AuthorLayout({ children }: Props) {
                   />
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

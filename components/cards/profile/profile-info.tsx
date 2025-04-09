@@ -45,7 +45,7 @@ export function ProfileCardInfo() {
               rel="noreferrer"
               className="underline-offset-4 hover:underline"
             >
-              Weaverse
+              Aquia
             </a>
           </p>
         </div>

@@ -38,21 +38,21 @@ export function ProfileCardInfo() {
         <div className="flex items-center text-gray-700 dark:text-gray-200">
           <BriefcaseBusiness strokeWidth={1.5} size={20} />
           <p className="flex items-center px-2">
-            Director, Security Engineering @{' '}
+            CTO & Co-Founder @{' '}
             <a
               target="_blank"
-              href="https://aquia.us"
+              href="https://weaverse.io"
               rel="noreferrer"
               className="underline-offset-4 hover:underline"
             >
-              Aquia
+              Weaverse
             </a>
           </p>
         </div>
         <div className="flex items-center text-gray-700 dark:text-gray-200">
           <MapPin strokeWidth={1.5} size={20} />
           <p className="px-2">
-            [::1]:443 - Petaluma,
+            [::1]:443 - Ha Noi,
             <span className="absolute ml-1 inline-flex pt-px">
               <Twemoji emoji="flag-vietnam" />
             </span>

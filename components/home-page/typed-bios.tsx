@@ -42,7 +42,7 @@ export function TypedBios() {
     >
       <ul id="bios" className="hidden">
         <li>I'm a leader, learner, and builder.</li>
-        <li>I live in the SF Bay Area. <Twemoji emoji="bridge at night" /></li>
+        <li>I live in the SF Bay Area. <Twemoji emoji="bridge-at-night" /></li>
         <li>I was born in beautiful Sonoma County.</li>
         <li>I fell in love with technology in 1994.<Twemoji emoji="desktop-computer" /></li>
         <li>I love cybersecurity.</li>

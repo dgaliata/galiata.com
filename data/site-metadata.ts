@@ -1,5 +1,5 @@
 export const SITE_METADATA = {
-  title: `Leo's dev blog – stories, insights, and ideas`,
+  title: `David's tech blog – stories, insights, and ideas`,
   author: 'Leo Huynh',
   headerTitle: `Leo's dev blog`,
   description:

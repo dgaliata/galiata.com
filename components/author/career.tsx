@@ -7,12 +7,12 @@ import { GrowingUnderline } from '~/components/ui/growing-underline'
 
 const EXPERIENCES = [
   {
-    org: 'Weaverse.io',
-    url: 'https://weaverse.io',
+    org: 'Aquia',
+    url: 'https://aquia.us',
     logo: '/static/images/weaverse-logo.png',
-    start: 'Mar 2022',
+    start: 'Dec 2021',
     end: 'Present',
-    title: 'CTO / Co.Founder / Software Engineer',
+    title: 'Director, Security Engineering',
     icon: 'briefcase',
     event: 'career-weaverse',
     details: () => {

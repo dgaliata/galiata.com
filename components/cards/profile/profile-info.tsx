@@ -52,7 +52,7 @@ export function ProfileCardInfo() {
         <div className="flex items-center text-gray-700 dark:text-gray-200">
           <MapPin strokeWidth={1.5} size={20} />
           <p className="px-2">
-            [::1]:443 - Petaluma,
+            [::1]:443 - Petaluma,CA
             <span className="absolute ml-1 inline-flex pt-px">
               <Twemoji emoji="flag-us" />
             </span>

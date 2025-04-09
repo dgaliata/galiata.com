@@ -1,5 +1,4 @@
 import type readingTime from 'reading-time'
-import type { StatsType } from '~/db/schema'
 import { formatDate, getTimeAgo } from '~/utils/misc'
 import { ViewsCounter } from './views-counter'
 

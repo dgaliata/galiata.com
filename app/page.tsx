@@ -10,7 +10,6 @@ export default async function HomePage() {
   return (
     <Home
       posts={allCoreContent(sortPosts(allBlogs)).slice(0, MAX_POSTS_DISPLAY)}
-      snippets={allCoreContent(sortPosts(allSnippets)).slice(0, MAX_SNIPPETS_DISPLAY)}
     />
   )
 }

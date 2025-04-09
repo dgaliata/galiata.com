@@ -3,12 +3,10 @@
 import { clsx } from 'clsx'
 import { useEffect, useRef, useState } from 'react'
 import { Twemoji } from '~/components/ui/twemoji'
-import type { SelectStats, StatsType } from '~/db/schema'
-import { useBlogStats, useUpdateBlogStats } from '~/hooks/use-blog-stats'
 
 const MAX_REACTIONS = 10
 
-const REACTIONS: Array<{ emoji: string; key: keyof SelectStats }> = [
+const REACTIONS: Array<{ emoji: string; key: string }> = [
   {
     emoji: 'sparkling-heart',
     key: 'loves',
@@ -32,30 +30,33 @@ export function Reactions({
   slug,
   className,
 }: {
-  type: StatsType
+  type: string  // Simplified to 'string' since you aren't using a database
   slug: string
   className?: string
 }) {
-  let [stats, isLoading] = useBlogStats(type, slug)
-  let updateReaction = useUpdateBlogStats()
-  let [initialReactions, setInitialReactions] = useState({})
-  let [reactions, setReactions] = useState({})
+  const [stats, setStats] = useState<{ [key: string]: number }>({
+    loves: 0,
+    applauses: 0,
+    bullseyes: 0,
+    ideas: 0,
+  })
+  const [reactions, setReactions] = useState<{ [key: string]: number }>({})
+  const [initialReactions, setInitialReactions] = useState<{ [key: string]: number }>({})
 
   useEffect(() => {
     try {
-      let data = JSON.parse(localStorage.getItem(`${type}/${slug}`) || '{}')
-      data.loves = data.loves || 0
-      data.applauses = data.applauses || 0
-      data.ideas = data.ideas || 0
-      data.bullseyes = data.bullseyes || 0
-      setInitialReactions(Object.assign({}, data))
-      setReactions(Object.assign({}, data))
-    } catch (e) {}
-  }, [])
+      const data = JSON.parse(localStorage.getItem(`${type}/${slug}`) || '{}')
+      setInitialReactions(data)
+      setReactions(data)
+    } catch (e) {
+      console.error('Error reading from localStorage:', e)
+    }
+  }, [type, slug])
 
   function handleChange(key: string) {
-    updateReaction({ type, slug, [key]: stats[key] + reactions[key] - initialReactions[key] })
-    localStorage.setItem(`${type}/${slug}`, JSON.stringify(reactions))
+    const updatedReactions = { ...reactions, [key]: stats[key] + reactions[key] - initialReactions[key] }
+    setReactions(updatedReactions)
+    localStorage.setItem(`${type}/${slug}`, JSON.stringify(updatedReactions))
   }
 
   return (
@@ -65,8 +66,8 @@ export function Reactions({
           key={key}
           path={`${type}/${slug}`}
           react={{ emoji, key }}
-          value={isLoading ? '--' : stats[key] + reactions[key] - initialReactions[key]}
-          reactions={reactions[key]}
+          value={stats[key] + (reactions[key] || 0) - (initialReactions[key] || 0)}
+          reactions={reactions[key] || 0}
           onReact={(v) => setReactions((r) => ({ ...r, [key]: v }))}
           onSave={() => handleChange(key)}
         />
@@ -84,15 +85,15 @@ function Reaction({
   onSave,
 }: {
   path: string
-  react: (typeof REACTIONS)[number]
+  react: { emoji: string; key: string }
   value: string | number
   reactions: number
   onReact: (v: number) => void
   onSave: () => void
 }) {
-  let { emoji, key } = react
-  let [reacting, setReacting] = useState(false)
-  let countRef = useRef<HTMLSpanElement>(null)
+  const { emoji, key } = react
+  const [reacting, setReacting] = useState(false)
+  const countRef = useRef<HTMLSpanElement>(null)
   let reactingTimeoutId: ReturnType<typeof setTimeout> | undefined
 
   function handleReact() {
@@ -101,7 +102,7 @@ function Reaction({
         clearTimeout(reactingTimeoutId)
       }
       setReacting(true)
-      let newReactions = reactions >= MAX_REACTIONS ? MAX_REACTIONS : reactions + 1
+      const newReactions = reactions >= MAX_REACTIONS ? MAX_REACTIONS : reactions + 1
       onReact(newReactions)
       if (countRef.current) {
         if (reactions >= MAX_REACTIONS) {

@@ -40,44 +40,25 @@ const EXPERIENCES = [
           <li>
           Senior IT Consultant responsible for implementing technological solutions to solve business problems for clients throughout the Bay Area, serving as technical lead and project manager.
           </li>
-          <li>
-            Built{' '}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://apps.shopify.com/foxecom-boost-sales"
-            >
-              Fox Kit Shopify App
-            </a>{' '}
-            - The upsells and boost conversion tool built to support Minimog theme
-          </li>
         </ul>
       )
     },
   },
   {
-    org: 'Coc Coc',
-    url: 'https://coccoc.com/en',
-    logo: '/static/images/coc-coc-logo.png',
-    start: 'May 2020',
-    end: 'Apr 2021',
-    title: 'Frontend Engineer',
+    org: 'Nims & Associates',
+    url: 'https://nimsassociates.com/',
+    logo: '/static/images/nims.jpeg',
+    start: 'Nov 2017',
+    end: 'Jun 2021',
+    title: 'Senior IT Systems Engineer',
     icon: 'man-technologist',
     event: 'career-coc-coc',
     details: () => {
       return (
         <ul className="[&>li]:my-2 [&>li]:pl-0">
           <li>
-            Working on the <strong>#1 web browser & search engine</strong> in{' '}
-            <strong>Viet Nam</strong> (30M+ users)
-          </li>
-          <li>
-            Built{' '}
-            <a target="_blank" rel="noopener noreferrer" href="https://coccoc.com/webhp">
-              Coc Coc's newsfeed
-            </a>
-          </li>
-          <li>Maintained and optimized new tab's widgets and performance</li>
+          Senior IT Consultant responsible for planning and executing successful IT deployments and fostering strong client relationships, developing and supporting technology needs for clients.
+            </li>
         </ul>
       )
     },

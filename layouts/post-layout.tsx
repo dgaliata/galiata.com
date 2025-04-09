@@ -1,3 +1,6 @@
+'use client'
+
+import { clsx } from 'clsx'
 import type { Author, Blog } from 'contentlayer/generated'
 import type { ReactNode } from 'react'
 import { BackToPosts } from '~/components/blog/back-to-posts'
@@ -14,7 +17,7 @@ import { TableOfContents } from '~/components/blog/toc'
 import { Container } from '~/components/ui/container'
 import { GradientDivider } from '~/components/ui/gradient-divider'
 import { SITE_METADATA } from '~/data/site-metadata'
-import type { StatsType } from '~/db/schema'
+// Removed import of StatsType since it's no longer necessary
 import type { CoreContent } from '~/types/data'
 
 interface LayoutProps {
@@ -43,7 +46,7 @@ export function PostLayout({ content, next, prev, children }: LayoutProps) {
             <BlogMeta
               date={date}
               lastmod={lastmod}
-              type={type.toLowerCase() as StatsType}
+              type={type.toLowerCase()}  // Removed cast to StatsType
               slug={slug}
               readingTime={readingTime}
             />
@@ -64,7 +67,7 @@ export function PostLayout({ content, next, prev, children }: LayoutProps) {
             <div className="space-y-4 divide-y divide-gray-200 dark:divide-gray-700 lg:sticky lg:top-24">
               {/* <BackToPosts label="Back to posts" /> */}
               <TableOfContents toc={toc} />
-              <Reactions className="pt-6" type={type.toLowerCase() as StatsType} slug={slug} />
+              <Reactions className="pt-6" type={type.toLowerCase()} slug={slug} />
               <div className="hidden">
                 {/* <script src="//servedby.eleavers.com/ads/ads.php?t=MzA5NzQ7MjEwNjA7c3F1YXJlLnNxdWFyZV9ib3g=&index=1"></script> */}
                 {/* <script

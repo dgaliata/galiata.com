@@ -2,11 +2,11 @@
 
 import { Menu, MenuButton, MenuItems, Transition } from '@headlessui/react'
 import { clsx } from 'clsx'
-import { Facebook, Link, Linkedin, Share2 } from 'lucide-react'
+import { Linkedin, Share2 } from 'lucide-react'
 import { Fragment, useState } from 'react'
-import { FacebookShareButton, LinkedinShareButton, TwitterShareButton } from 'react-share'
+import { LinkedinShareButton } from 'react-share'
 import { SITE_METADATA } from '~/data/site-metadata'
-import XIcon from '~/icons/x.svg'
+// Removed X and Facebook imports
 import { DiscussOnX } from './discuss-on-x'
 import { EditOnGithub } from './edit-on-github'
 
@@ -65,20 +65,12 @@ export function SocialShare({ postUrl, filePath, title, className }: SocialButto
               onClick={handleCopyLink}
               className="flex items-center gap-2.5 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
             >
-              <Link strokeWidth={1.5} size={18} />
-              <span>{copied ? 'Copied' : 'Copy link'}</span>
+              <span>Copy link</span>
+              {copied ? 'Copied' : 'Copy link'}
             </button>
           </div>
           <div className="space-y-3 px-4 py-3">
-            <TwitterShareButton
-              url={postUrl}
-              title={title}
-              via={SITE_METADATA.x}
-              className="flex items-center gap-2.5 !text-gray-600 hover:!text-gray-900 dark:!text-gray-400 dark:hover:!text-gray-100"
-            >
-              <XIcon className="h-4 w-4" fill="#fff" viewBox="0 0 1200 1227" />
-              <span className="">Share on X (Twitter)</span>
-            </TwitterShareButton>
+            {/* Removed Twitter and Facebook share buttons */}
             <LinkedinShareButton
               url={postUrl}
               title={title}
@@ -87,13 +79,6 @@ export function SocialShare({ postUrl, filePath, title, className }: SocialButto
               <Linkedin strokeWidth={1.5} size={18} />
               <span className="">Share on LinkedIn</span>
             </LinkedinShareButton>
-            <FacebookShareButton
-              url={postUrl}
-              className="flex items-center gap-2.5 !text-gray-600 hover:!text-gray-900 dark:!text-gray-400 dark:hover:!text-gray-100"
-            >
-              <Facebook strokeWidth={1.5} size={18} />
-              <span className="">Share on Facebook</span>
-            </FacebookShareButton>
           </div>
           <div className="flex flex-col gap-3 px-4 py-3">
             <DiscussOnX postUrl={postUrl} />

@@ -9,9 +9,10 @@ import { SITE_METADATA } from '~/data/site-metadata'
 import type { GithubRepository } from '~/types/data'
 import { fetcher } from '~/utils/misc'
 
-const TIME_IS = 'https://time.is/Hanoi'
-const MY_TIMEZONE = 'Asia/Ho_Chi_Minh'
-const MY_TIMEZONE_OFFSET = 7 * -60 // UTC+7
+const TIME_IS = 'https://time.is/Los_Angeles'
+const MY_TIMEZONE = 'America/Los_Angeles'
+const MY_TIMEZONE_OFFSET = -7 * 60 // UTC-7 (Pacific Daylight Time)
+// Note: If you're using this during Standard Time (winter), change to -8 * 60
 
 function getTime() {
   let date = new Date()
@@ -56,7 +57,7 @@ export function FooterMeta() {
       <div className="flex items-center gap-2">
         <Map className="h-5 w-5" />
         <span className="font-medium">
-          [::1]:443 - Ha Noi, <Twemoji emoji="flag-vietnam" className="!h-4.5" />
+          [::1]:443 - Petaluma, CA <Twemoji emoji="flag-us" className="!h-4.5" />
         </span>
       </div>
       <div className="flex items-center gap-2">

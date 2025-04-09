@@ -5,34 +5,22 @@ import { SITE_METADATA } from '~/data/site-metadata'
 
 const LINKS = [
   {
-    title: `What have I built?`,
+    title: `Skills`,
     href: `/projects`,
     emoji: 'man-technologist',
     event: 'home-link-projects',
   },
   {
-    title: `My writings`,
+    title: `My blog`,
     href: `/blog`,
     emoji: 'memo',
     event: 'home-link-blog',
-  },
-  {
-    title: `Snippets collection`,
-    href: `/snippets`,
-    emoji: 'dna',
-    event: 'home-link-snippets',
   },
   {
     title: `About me & this blog`,
     href: `/about`,
     emoji: 'smiling-face-with-sunglasses',
     event: 'home-link-about',
-  },
-  {
-    title: `Traffic and insights`,
-    href: SITE_METADATA.analytics.umamiAnalytics.shareUrl,
-    emoji: 'bar-chart',
-    event: 'home-link-analytics',
   },
 ]
 

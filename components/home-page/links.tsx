@@ -23,7 +23,6 @@ const LINKS = [
     event: 'home-link-about',
   },
 ]
-
 export function BlogLinks() {
   return (
     <div className="flex flex-col gap-2.5 md:gap-3">

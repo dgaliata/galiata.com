@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect } from 'react'
-import type { StatsType } from '~/db/schema'
 import { useBlogStats, useUpdateBlogStats } from '~/hooks/use-blog-stats'
 
 export function ViewsCounter({
@@ -9,7 +8,7 @@ export function ViewsCounter({
   slug,
   className,
 }: {
-  type: StatsType
+  type: string
   slug: string
   className?: string
 }) {

@@ -19,12 +19,7 @@ const EXPERIENCES = [
       return (
         <ul className="[&>li]:my-2 [&>li]:pl-0">
           <li>
-            Building a smart{' '}
-            <a target="_blank" rel="noopener noreferrer" href="https://weaverse.io/demo">
-              Shopify Hydrogen Theme Customizer
-            </a>{' '}
-            to help creators build their own high quality and high performance headless storefronts
-            easily.
+          Director and Principal Security Engineer leading the design and implementation of security solutions for both enterprise clients and the US Government. Responsible for cloud security architecture, regulatory compliance, and ensuring adherence to security standards while enabling advanced technological capabilities.
           </li>
         </ul>
       )
@@ -36,22 +31,14 @@ const EXPERIENCES = [
     logo: '/static/images/cb.jpeg',
     start: 'Jun 2021',
     end: 'Dec 2021',
-    title: 'Senior Software Engineer',
+    title: 'Senior Enterprise Network and Systems Consultant',
     icon: 'man-technologist',
     event: 'career-foxecom',
     details: () => {
       return (
         <ul className="[&>li]:my-2 [&>li]:pl-0">
           <li>
-            Built{' '}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://themeforest.net/item/minimog-the-high-converting-shopify-theme/33380968"
-            >
-              Minimog
-            </a>{' '}
-            - a multipurpose Shopify Theme (top best selling templates on Envato Market)
+          Senior IT Consultant responsible for implementing technological solutions to solve business problems for clients throughout the Bay Area, serving as technical lead and project manager.
           </li>
           <li>
             Built{' '}

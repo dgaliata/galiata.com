@@ -1,3 +1,5 @@
+'use client'
+
 import { clsx } from 'clsx'
 import type { Blog } from 'contentlayer/generated'
 import type { ReactNode } from 'react'
@@ -12,7 +14,7 @@ import { SocialShare } from '~/components/blog/social-share'
 import { TagsList } from '~/components/blog/tags'
 import { Container } from '~/components/ui/container'
 import { SITE_METADATA } from '~/data/site-metadata'
-import type { StatsType } from '~/db/schema'
+// Removed import of StatsType since it's no longer necessary
 import type { CoreContent } from '~/types/data'
 
 interface LayoutProps {
@@ -39,7 +41,7 @@ export function PostBanner({ content, children }: LayoutProps) {
               <BlogMeta
                 date={date}
                 lastmod={lastmod}
-                type={type.toLowerCase() as StatsType}
+                type={type.toLowerCase()}  // Removed the cast to StatsType
                 slug={slug}
                 readingTime={readingTime}
               />

@@ -1,4 +1,4 @@
-import type { Blog, Snippet } from '~/.contentlayer/generated'
+import type { Blog } from '~/.contentlayer/generated'
 import { ProfileCard } from '~/components/cards/profile'
 import { Container } from '~/components/ui/container'
 import { Twemoji } from '~/components/ui/twemoji'
@@ -11,10 +11,8 @@ import { TypedBios } from './typed-bios'
 
 export function Home({
   posts,
-  //snippets,
 }: {
   posts: CoreContent<Blog>[]
-  snippets: CoreContent<Snippet>[]
 }) {
   return (
     <Container as="div" className="pt-4 lg:pt-12">
@@ -36,12 +34,7 @@ export function Home({
           <ProfileCard />
         </div>
       </div>
-      <LatestPosts posts={posts} />
-      {/* {SITE_METADATA.newsletter?.provider && (
-        <div className="flex items-center justify-center py-4 lg:py-10">
-          <NewsletterForm />
-        </div>
-      )} */}
+      <LatestPosts posts={posts} /> {/* Only passing posts now */}
     </Container>
   )
 }

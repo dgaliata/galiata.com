@@ -33,15 +33,15 @@ export function ProfileCardInfo() {
   return (
     <div className="hidden py-4 md:block md:px-5">
       <h3 className="text-xl font-semibold text-gray-800 dark:text-white">David Galiata</h3>
-      <h5 className="py-2 text-gray-500 dark:text-gray-400">Learner | Builder</h5>
+      <h5 className="py-2 text-gray-500 dark:text-gray-400">Leader | Learner | Builder</h5>
       <div className="mb-2 mt-4 space-y-4">
         <div className="flex items-center text-gray-700 dark:text-gray-200">
           <BriefcaseBusiness strokeWidth={1.5} size={20} />
           <p className="flex items-center px-2">
-            CTO & Co-Founder @{' '}
+            Security Engineering @{' '}
             <a
               target="_blank"
-              href="https://weaverse.io"
+              href="https://aquia.us"
               rel="noreferrer"
               className="underline-offset-4 hover:underline"
             >
@@ -52,7 +52,7 @@ export function ProfileCardInfo() {
         <div className="flex items-center text-gray-700 dark:text-gray-200">
           <MapPin strokeWidth={1.5} size={20} />
           <p className="px-2">
-            [::1]:443 - Ha Noi,
+            [::1]:443 - Petaluma, CA
             <span className="absolute ml-1 inline-flex pt-px">
               <Twemoji emoji="flag-us" />
             </span>

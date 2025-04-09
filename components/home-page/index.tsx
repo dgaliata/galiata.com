@@ -25,10 +25,9 @@ export function Home({
             <Intro />
             <TypedBios />
             <div className="mb-6 mt-4 md:mb-8">
-              <p>I started learning to code in 2016 and have been hooked ever since.</p>
-              <p>I landed my first job as a Python coding mentor in 2017.</p>
-              <p>I have a passion for JS/TS, web dev, and eCommerce.</p>
-              <p>I started this blog to document and share my knowledge & experience.</p>
+              <p>I'm a Security Engineering Director with over 15 years of experience in IT.</p>
+              <p>I have a strong background in network and systems consulting.</p>
+              <p>I currently focus on cybersecurity and cloud engineering solutions, leading high-impact projects.</p>
             </div>
             <BlogLinks />
             <p className="my-6 flex md:my-8">

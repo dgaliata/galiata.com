@@ -9,7 +9,6 @@ import { BlogMeta } from '~/components/blog/blog-meta'
 import { Comments } from '~/components/blog/comments'
 import { PostNav } from '~/components/blog/post-nav'
 import { PostTitle } from '~/components/blog/post-title'
-import { Reactions } from '~/components/blog/reactions'
 import { ScrollButtons } from '~/components/blog/scroll-buttons'
 import { SocialShare } from '~/components/blog/social-share'
 import { TagsList } from '~/components/blog/tags'
@@ -67,7 +66,7 @@ export function PostLayout({ content, next, prev, children }: LayoutProps) {
             <div className="space-y-4 divide-y divide-gray-200 dark:divide-gray-700 lg:sticky lg:top-24">
               {/* <BackToPosts label="Back to posts" /> */}
               <TableOfContents toc={toc} />
-              <Reactions className="pt-6" type={type.toLowerCase()} slug={slug} />
+              {/* <Reactions className="pt-6" type={type.toLowerCase()} slug={slug} /> */}
               <div className="hidden">
                 {/* <script src="//servedby.eleavers.com/ads/ads.php?t=MzA5NzQ7MjEwNjA7c3F1YXJlLnNxdWFyZV9ib3g=&index=1"></script> */}
                 {/* <script

@@ -30,10 +30,6 @@ export function Home({
               <p>I currently focus on cybersecurity and cloud engineering solutions, leading high-impact projects.</p>
             </div>
             <BlogLinks />
-            <p className="my-6 flex md:my-8">
-              <span className="mr-2">Happy reading</span>
-              <Twemoji emoji="clinking-beer-mugs" />
-            </p>
           </div>
         </div>
         <div className="hidden pl-4 pt-8 xl:block">

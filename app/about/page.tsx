@@ -1,19 +1,23 @@
 import { genPageMetadata } from 'app/seo'
 import type { Author } from 'contentlayer/generated'
-import { allAuthors } from 'contentlayer/generated'
-import { AuthorLayout } from '~/layouts/author-layout'
+import { allAuthors, allBlogs } from 'contentlayer/generated'
+import { Home } from '~/components/home-page'
 import { coreContent } from '~/utils/contentlayer'
 
-export let metadata = genPageMetadata({ title: 'About' })
+export let metadata = genPageMetadata({ title: 'Home' })
 
-export default function AboutPage() {
-  let author = allAuthors.find((p) => p.slug === 'default') as Author
-  let mainContent = coreContent(author)
+const MAX_POSTS_DISPLAY = 5
+
+export default function HomePage() {
+  const author = allAuthors.find((p) => p.slug === 'default') as Author
+  const mainContent = coreContent(author)
+  const posts = allCoreContent(sortPosts(allBlogs)).slice(0, MAX_POSTS_DISPLAY)
 
   return (
-    <AuthorLayout content={mainContent}>
-      {/* TODO: MDX seems to be broken on this page, so I'm back to JSX for now */}
-      {/* <MDXLayoutRenderer code={author.body.code} /> */}
-    </AuthorLayout>
+    <div>
+      <Home
+        posts={posts} // Only passing posts, removing snippets
+      />
+    </div>
   )
 }

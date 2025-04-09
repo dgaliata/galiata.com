@@ -1,6 +1,4 @@
 import type { NextRequest } from 'next/server'
-import { getBlogStats, updateBlogStats } from '~/db/queries'
-import type { SelectStats, StatsType } from '~/db/schema'
 
 export async function GET(request: NextRequest) {
   try {

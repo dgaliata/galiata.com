@@ -1,7 +1,6 @@
 import { SITE_METADATA } from '~/data/site-metadata'
 import { BriefcaseBusiness, Github, Linkedin, Mail, MapPin } from 'lucide-react'
 import { Fragment } from 'react'
-import XIcon from '~/icons/x.svg'
 import { Twemoji } from '~/components/ui/twemoji'
 
 function getAccountHandle(url = '') {
@@ -27,13 +26,7 @@ const SOCIALS = [
     Icon: () => <Linkedin size={20} strokeWidth={1.5} />,
     umamiEvent: 'profile-card-linkedin',
   },
-  {
-    platform: 'x',
-    handle: getAccountHandle(SITE_METADATA.x),
-    href: SITE_METADATA.x,
-    Icon: () => <XIcon className="h-4 w-4" fill="#fff" viewBox="0 0 1200 1227" />,
-    umamiEvent: 'profile-card-x',
-  },
+  // Removed the X (Twitter) reference as it's no longer used
 ]
 
 export function ProfileCardInfo() {

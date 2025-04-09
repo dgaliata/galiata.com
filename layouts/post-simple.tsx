@@ -1,3 +1,6 @@
+'use client'
+
+import { clsx } from 'clsx'
 import type { Blog, Snippet } from 'contentlayer/generated'
 import type { ReactNode } from 'react'
 import { BlogMeta } from '~/components/blog/blog-meta'
@@ -11,7 +14,7 @@ import { TagsList } from '~/components/blog/tags'
 import { Container } from '~/components/ui/container'
 import { GradientDivider } from '~/components/ui/gradient-divider'
 import { SITE_METADATA } from '~/data/site-metadata'
-import type { StatsType } from '~/db/schema'
+// Removed import of StatsType since it's no longer necessary
 import type { CoreContent } from '~/types/data'
 
 interface PostSimpleProps {
@@ -38,7 +41,7 @@ export function PostSimple({ content, children }: PostSimpleProps) {
               <BlogMeta
                 date={date}
                 lastmod={lastmod}
-                type={type.toLowerCase() as StatsType}
+                type={type.toLowerCase()}  // Removed cast to StatsType
                 slug={slug}
                 readingTime={readingTime}
               />

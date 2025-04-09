@@ -52,7 +52,6 @@ export function LatestPosts({
         </ul>
       ) : (
         <div className="py-10">
-          {/* Removed the snippets section */}
         </div>
       )}
     </div>

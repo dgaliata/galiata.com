@@ -21,7 +21,7 @@ export const PROJECTS: Project[] = [
   {
     type: 'work',
     title: 'Cybersecurity & Risk Management',
-    description: `Implementing comprehensive security practices and risk management frameworks to protect digital assets and information.`,
+    description: `Implementing security practices and risk management frameworks to protect digital assets and information.`,
     imgSrc: '/static/images/shield.png',
     builtWith: [
       'Network Security',
@@ -39,7 +39,7 @@ export const PROJECTS: Project[] = [
   {
     type: 'work',
     title: 'Networking & System Administration',
-    description: `Designing, implementing, and troubleshooting network infrastructures and managing system operations.`,
+    description: `Designing, implementing, and troubleshooting network infrastructure and managing system operations.`,
     imgSrc: '/static/images/linux.png',
     builtWith: [
       'Network Design',

@@ -1,5 +1,6 @@
 <h1 align="center">galiata.com</h1>
-![galiata.com](https://res.cloudinary.com/dcu6gtw2y/image/upload/v1744322556/4_buulum.png)
+
+![site logo](https://res.cloudinary.com/dcu6gtw2y/image/upload/v1744322556/4_buulum.png)
 
 <div align="center">
 

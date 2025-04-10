@@ -117,32 +117,7 @@ const EXPERIENCES = [
       )
     },
   },
-  {
-    org: 'Hanoi University of Science and Technology',
-    url: 'https://www.hust.edu.vn/en/',
-    logo: '/static/images/hust-logo.png',
-    start: 'Sep 2013',
-    end: 'Feb 2019',
-    title: 'Student at SEEE (School of Electrical & Electronic Engineering)',
-    icon: 'man-student',
-    event: 'career-hust',
-    details: () => {
-      return (
-        <ul className="[&>li]:my-2 [&>li]:pl-0">
-          <li>
-            Get a good degree at <strong>School of Electrical & Electronic Engineering</strong>
-          </li>
-          <li>
-            And yeah! My major subject was <strong>Electronics and Telecommunications</strong>, but
-            I couldn't find interest in that field. So I learned Software Engineering instead, and
-            became what I am today.
-          </li>
-        </ul>
-      )
-    },
-  },
 ]
-
 export function CareerTimeline() {
   return (
     <ul className="m-0 list-none p-0">

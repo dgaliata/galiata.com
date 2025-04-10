@@ -64,28 +64,36 @@ const EXPERIENCES = [
     },
   },
   {
-    org: 'BraveBits',
-    url: 'https://bravebits.co/',
-    logo: '/static/images/bb-logo.png',
-    start: 'Aug 2018',
-    end: 'Apr 2020',
-    title: 'Fullstack Developer',
+    org: 'KLH Consulting',
+    url: 'https://klhconsulting.com/',
+    logo: '/static/images/klh.jpeg',
+    start: 'Apr 2013',
+    end: 'Nov 2017',
+    title: 'Senior Network Engineer',
     icon: 'man-technologist',
     event: 'career-bravebits',
     details: () => {
       return (
         <ul className="[&>li]:my-2 [&>li]:pl-0">
-          <li>Working on the #1 Page Builder app on Shopify app store</li>
-          <li>Built Pagefly's Analytics APIs</li>
-          <li>
-            Built{' '}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/sellersmith/slider-x"
-            >
-              Slider-x
-            </a>
+          <li> Designed, implemented, analyzed, and maintained IT Infrastructure of internal and external customer environments, serving as principal IT Engineer for clients throughout the Bay Area.
+          </li>
+        </ul>
+      )
+    },
+  },
+  {
+    org: 'Portola Systems',
+    url: 'https://portolasystems.net/',
+    logo: '/static/images/psi.png',
+    start: 'Dec 2010',
+    end: 'Apr 2013',
+    title: 'Engineer',
+    icon: 'man-technologist',
+    event: 'career-bravebits',
+    details: () => {
+      return (
+        <ul className="[&>li]:my-2 [&>li]:pl-0">
+          <li> Served small and medium businesses in all facets of technology, designing and implementing Windows server environments and configuring various networking technologies.
           </li>
         </ul>
       )

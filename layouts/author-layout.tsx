@@ -31,21 +31,24 @@ export function AuthorLayout({ children }: Props) {
           <div className="prose prose-lg dark:prose-invert">
             <div>
               <h2 className="mt-0">
-              <h2 className="text-xl font-bold md:text-2xl">
-  Hi there <Twemoji emoji="waving-hand" />
-</h2>
-<p>
-  I'm <strong>David Galiata</strong>, a Security Engineering Director based in <strong>Petaluma, California</strong>. I have a passion for all things <strong>cybersecurity</strong> and <strong>cloud engineering</strong>. With over <strong>15 years</strong> of IT experience, I've built and operated secure, large-scale systems for enterprise environments.
-</p>
-<p>
-  My expertise spans <strong>cloud infrastructure</strong>, <strong>network security</strong>, and <strong>systems consulting</strong>. I hold several industry certifications including <strong>CISM</strong>, <strong>CCSP</strong>, <strong>CCAK</strong>, and multiple <strong>AWS credentials</strong>.
-</p>
-<p>
-  This blog serves as a platform for sharing insights and knowledge I've gained throughout my career in cybersecurity. I believe that writing and sharing technical concepts is not only beneficial for others but also helps solidify my own understanding.
-</p>
-<p>
-  My superpower is learning new technologies quickly, allowing me to adapt to evolving security challenges and provide effective solutions. I'm always excited to connect with fellow security professionals <Twemoji emoji="shield" />.
-</p>
+                Hi there <Twemoji emoji="waving-hand" />
+              </h2>
+              <p>
+        I'm <strong>David Galiata</strong>, a Security Engineering Director based in <strong>Petaluma, California</strong>. I have a passion for all things <strong>cybersecurity</strong> and <strong>cloud engineering</strong>. With over <strong>15 years</strong> of IT experience, I've built and operated secure, large-scale systems for enterprise environments.
+      </p>
+      <p>
+        My expertise spans <strong>cloud infrastructure</strong>, <strong>network security</strong>, and <strong>systems consulting</strong>. I hold several industry certifications including <strong>CISM</strong>, <strong>CCSP</strong>, <strong>CCAK</strong>, and multiple <strong>AWS credentials</strong>.
+      </p>
+              <p>
+              This blog serves as a platform for sharing insights and knowledge I've gained throughout my career in cybersecurity. I believe that writing and sharing technical concepts is not only beneficial for others but also helps solidify my own understanding.
+              </p>
+              <p>
+        My superpower is learning new technologies quickly, allowing me to adapt to evolving security challenges and provide effective solutions. I'm always excited to connect with fellow security professionals <Twemoji emoji="shield" />.
+      </p>
+              <p>
+                I greatly appreciate comments and thoughts on my posts{' '}
+                <Twemoji emoji="clinking-beer-mugs" />.
+              </p>
             </div>
             <div>
               <div className="mb-[1em] mt-[2em] flex items-center justify-between [&>h2]:my-0">

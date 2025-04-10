@@ -1,47 +1,18 @@
 import type { SVGProps } from 'react'
 
-export function Signature(props: SVGProps<SVGSVGElement>) {
+export function Signature(props) {
   return (
-<svg
-   width="1242"
-   height="676"
-   viewBox="0 0 1242 676"
-   version="1.1"
-   id="svg5"
-   inkscape:version="1.1.1 (c3084ef, 2021-09-22)"
-   sodipodi:docname="sig.svg"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview7"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:document-units="mm"
-     showgrid="false"
-     inkscape:zoom="0.57370932"
-     inkscape:cx="443.60444"
-     inkscape:cy="582.17636"
-     inkscape:window-width="1312"
-     inkscape:window-height="866"
-     inkscape:window-x="0"
-     inkscape:window-y="38"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="layer1" />
-  <defs
-     id="defs2" />
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1">
-    <path
-       style="fill:currentColor;stroke:none"
-       d="M3607 6714 c-3 -4 -64 -6 -134 -5 -160 1 -400 -28 -573 -68 -25 -6
+    <svg
+      width="1242"
+      height="676"
+      viewBox="0 0 1242 676"
+      version="1.1"
+      {...props}
+    >
+      <g>
+        <path
+          style={{fill: "currentColor", stroke: "none"}}
+          d="M3607 6714 c-3 -4 -64 -6 -134 -5 -160 1 -400 -28 -573 -68 -25 -6
 -83 -18 -130 -26 -47 -8 -101 -19 -120 -25 -19 -5 -47 -10 -61 -10 -15 0 -52
 -13 -84 -30 -31 -16 -78 -36 -104 -44 -27 -8 -57 -19 -67 -24 -11 -5 -32 -16
 -49 -23 -16 -8 -41 -24 -55 -37 -14 -13 -47 -35 -74 -49 -27 -13 -77 -47 -112
@@ -65,10 +36,10 @@ export function Signature(props: SVGProps<SVGSVGElement>) {
 13 -30 24 -34 24 -5 0 -27 16 -50 35 -53 45 -317 175 -356 175 -20 0 -70 15
 -116 35 -16 7 -50 16 -75 20 -25 4 -67 16 -95 27 -27 11 -61 17 -74 15 -14 -3
 -45 1 -70 9 -25 8 -46 14 -47 14 0 0 -3 -3 -7 -6z"
-     />
-    <path
-       style="fill:currentColor;stroke:none"
-       d="M6995 6166 c-19 -19 -25 -36 -26 -68 0 -79 -7 -126 -22 -160 -23 -50
+        />
+        <path
+          style={{fill: "currentColor", stroke: "none"}}
+          d="M6995 6166 c-19 -19 -25 -36 -26 -68 0 -79 -7 -126 -22 -160 -23 -50
 -30 -78 -32 -133 -4 -78 -13 -123 -45 -216 -15 -48 -33 -111 -39 -140 -5 -30
 -28 -92 -50 -139 -23 -46 -41 -92 -41 -101 0 -9 -6 -22 -14 -28 -8 -7 -17 -24
 -21 -39 -11 -45 -54 -129 -68 -135 -8 -3 -18 -23 -22 -44 -13 -74 -73 -225
@@ -269,15 +240,15 @@ export function Signature(props: SVGProps<SVGSVGElement>) {
 -47 -25 -86 -13 -38 -25 -80 -25 -93 0 -13 -4 -32 -10 -42 -12 -22 -95 -70
 -122 -70 -18 0 -19 5 -14 73 3 39 10 90 15 111 5 22 7 44 4 49 -16 26 75 147
 110 147 9 0 19 5 22 10 4 6 10 8 15 5 5 -3 11 -1 15 5 12 20 43 10 49 -16z"
-     />
-    <path
-       style="fill:currentColor;stroke:none"
-       d="M6696 4174 c-4 -10 -1 -14 6 -12 15 5 23 28 10 28 -5 0 -13 -7 -16
+        />
+        <path
+          style={{fill: "currentColor", stroke: "none"}}
+          d="M6696 4174 c-4 -10 -1 -14 6 -12 15 5 23 28 10 28 -5 0 -13 -7 -16
 -16z"
-     />
-    <path
-       style="fill:currentColor;stroke:none"
-       d="M3462 5928 c-6 -6 -12 -21 -12 -33 0 -12 -5 -26 -11 -32 -11 -11 -22
+        />
+        <path
+          style={{fill: "currentColor", stroke: "none"}}
+          d="M3462 5928 c-6 -6 -12 -21 -12 -33 0 -12 -5 -26 -11 -32 -11 -11 -22
 -128 -21 -223 2 -127 10 -248 16 -258 4 -6 1 -31 -5 -57 -9 -34 -9 -64 0 -121
 9 -58 8 -80 0 -91 -7 -8 -12 -43 -11 -81 4 -233 0 -298 -23 -366 -18 -52 -18
 -56 -2 -74 18 -20 22 -42 8 -42 -5 0 -12 -19 -16 -42 -4 -24 -9 -52 -11 -63
@@ -297,17 +268,17 @@ export function Signature(props: SVGProps<SVGSVGElement>) {
 -2 125 5 49 4 101 -1 119 -7 22 -6 37 2 46 7 9 9 37 5 81 -5 46 -2 87 7 123 8
 30 17 84 21 122 8 71 0 83 -32 52 -14 -14 -17 -14 -34 1 -19 17 -33 61 -34
 109 0 32 -22 44 -43 23z"
-     />
-    <path
-       style="fill:currentColor;stroke:none"
-       d="M5334 3660 c-42 -27 -98 -81 -112 -107 -7 -13 -19 -20 -29 -17 -23 5
+        />
+        <path
+          style={{fill: "currentColor", stroke: "none"}}
+          d="M5334 3660 c-42 -27 -98 -81 -112 -107 -7 -13 -19 -20 -29 -17 -23 5
 -46 -13 -67 -54 -9 -18 -35 -46 -58 -63 -51 -37 -78 -75 -78 -112 0 -17 -10
 -37 -26 -52 -28 -26 -58 -114 -47 -141 8 -22 86 -54 132 -54 52 0 111 28 111
 52 0 10 -4 18 -8 18 -17 0 -62 46 -62 63 0 11 13 24 34 32 28 12 38 25 61 82
 15 37 37 82 49 98 13 17 33 49 44 72 12 22 25 43 30 45 4 1 27 28 50 59 64 85
 51 127 -24 79z"
-     />
-  </g>
-</svg>
-  )
+        />
+      </g>
+    </svg>
+  );
 }

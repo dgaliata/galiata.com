@@ -21,13 +21,16 @@ export function ProjectCard({ project }: { project: (typeof PROJECTS)[0] }) {
   let href = repository?.url || url
   let lang = repository?.languages?.[0]
 
+  // Calculate how many skills per column (3 columns for larger screens, 1 for mobile)
+  const skillsPerColumn = Math.ceil(builtWith.length / 3);
+
   return (
     <GradientBorder
       offset={28}
       className="flex flex-col rounded-[40px] p-6 [box-shadow:0_8px_32px_rgba(194,194,218,.3)] dark:bg-white/5 dark:shadow-none md:p-8"
     >
       <TiltedGridBackground className="inset-0 z-[-1] rounded-[40px]" />
-      <div className="mb-6 flex items-center gap-4">
+      <div className="mb-4 flex items-center gap-4">
         <Image src={imgSrc} alt={title} width={100} height={100} className="h-15 w-15 shrink-0" />
         <div className="flex flex-col items-start gap-1 pt-1">
           <h2 className="text-[22px] font-bold leading-[30px]">
@@ -41,11 +44,35 @@ export function ProjectCard({ project }: { project: (typeof PROJECTS)[0] }) {
           </h2>
         </div>
       </div>
-      <p className="mb-16 line-clamp-3 grow text-lg">{repository?.description || description}</p>
+      <p className="mb-6 text-lg">{repository?.description || description}</p>
+
+      {/* Skills as bullet points */}
+      <div className="mb-6 grid grid-cols-1 gap-x-4 md:grid-cols-3">
+        {[0, 1, 2].map(columnIndex => (
+          <div key={columnIndex} className={columnIndex >= Math.ceil(builtWith.length / skillsPerColumn) ? 'hidden md:block' : ''}>
+            <ul className="space-y-1">
+              {builtWith
+                .slice(
+                  columnIndex * skillsPerColumn, 
+                  Math.min((columnIndex + 1) * skillsPerColumn, builtWith.length)
+                )
+                .map(skill => (
+                  <li key={skill} className="flex items-start text-sm md:text-base">
+                    <span className="mr-2 text-gray-500 dark:text-gray-400">•</span>
+                    <span>{skill}</span>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      {/* Keep the bottom section for GitHub stars, links, etc. */}
       <div
         className={clsx(
           'mt-auto flex gap-6 sm:gap-9 md:grid md:gap-0',
-          repository ? 'grid-cols-3' : 'grid-cols-2'
+          repository ? 'grid-cols-2' : 'grid-cols-1'
         )}
       >
         {repository ? (
@@ -61,7 +88,7 @@ export function ProjectCard({ project }: { project: (typeof PROJECTS)[0] }) {
               </div>
             </div>
           </div>
-        ) : (
+        ) : links?.length ? (
           <div className="space-y-1.5">
             <div className="text-xs text-gray-600 dark:text-gray-400">Links</div>
             <div className="flex flex-col items-start gap-0.5 sm:flex-row sm:items-center sm:gap-1.5">
@@ -79,30 +106,7 @@ export function ProjectCard({ project }: { project: (typeof PROJECTS)[0] }) {
               ))}
             </div>
           </div>
-        )}
-        <div className="space-y-1.5">
-          <div className="text-xs text-gray-600 dark:text-gray-400">Stack</div>
-          <div className="flex h-6 flex-wrap items-center gap-1.5">
-            {builtWith?.map((tool) => {
-              return (
-                <Brand
-                  key={tool}
-                  name={tool as keyof typeof BrandsMap}
-                  iconClassName={clsx(tool === 'Pygame' ? 'h-4' : 'h-4 w-4')}
-                />
-              )
-            })}
-          </div>
-        </div>
-        {lang && (
-          <div className="space-y-1.5">
-            <div className="text-xs text-gray-600 dark:text-gray-400">Language</div>
-            <div className="flex items-center gap-1.5">
-              <Brand name={lang.name as keyof typeof BrandsMap} as="icon" className="h-4 w-4" />
-              <span className="font-medium">{lang.name}</span>
-            </div>
-          </div>
-        )}
+        ) : null}
       </div>
     </GradientBorder>
   )

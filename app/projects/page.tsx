@@ -4,7 +4,7 @@ import { Container } from '~/components/ui/container'
 import { PageHeader } from '~/components/ui/page-header'
 import { PROJECTS } from '~/data/projects'
 
-export let metadata = genPageMetadata({ title: 'Projects' })
+export let metadata = genPageMetadata({ title: 'Skills' })
 
 export default async function Projects() {
   let workProjects = PROJECTS.filter(({ type }) => type === 'work')
@@ -19,7 +19,7 @@ export default async function Projects() {
       />
       <div className="py-5 md:py-10">
         <h3 className="mb-6 text-2xl font-bold leading-9 tracking-tight text-gray-900 dark:text-gray-100 md:text-3xl">
-          Work
+          Professional Skills
         </h3>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           {workProjects.map((pro) => (
@@ -27,16 +27,18 @@ export default async function Projects() {
           ))}
         </div>
       </div>
-      <div className="mt-6 border-t border-gray-200 py-5 dark:border-gray-700 md:mt-10 md:py-10">
-        <h3 className="mb-6 text-2xl font-bold leading-9 tracking-tight text-gray-900 dark:text-gray-100 md:mb-8 md:text-3xl">
-          Side projects
-        </h3>
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-          {sideProjects.map((pro) => (
-            <ProjectCard key={pro.title} project={pro} />
-          ))}
+      {sideProjects.length > 0 && (
+        <div className="mt-6 border-t border-gray-200 py-5 dark:border-gray-700 md:mt-10 md:py-10">
+          <h3 className="mb-6 text-2xl font-bold leading-9 tracking-tight text-gray-900 dark:text-gray-100 md:mb-8 md:text-3xl">
+            Personal Projects
+          </h3>
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
+            {sideProjects.map((pro) => (
+              <ProjectCard key={pro.title} project={pro} />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </Container>
   )
 }

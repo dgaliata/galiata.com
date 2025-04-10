@@ -82,65 +82,37 @@ const EXPERIENCES = [
     },
   },
   {
-    org: 'Portola Systems',
-    url: 'https://portolasystems.net/',
-    logo: '/static/images/psi.png',
-    start: 'Dec 2010',
-    end: 'Apr 2013',
-    title: 'Engineer',
+    org: 'Hansel Enterprises',
+    url: 'https://gohansel.com/',
+    logo: '/static/images/hansel.jpeg',
+    start: 'Apr 2009',
+    end: 'Nov 2010',
+    title: 'Junior Systems Administrator',
     icon: 'man-technologist',
     event: 'career-bravebits',
     details: () => {
       return (
         <ul className="[&>li]:my-2 [&>li]:pl-0">
-          <li> Served small and medium businesses in all facets of technology, designing and implementing Windows server environments and configuring various networking technologies.
+          <li> Internal IT Department position supporting over 500 users in 7 different locations, responsible for helpdesk tickets, server support, and backup administration.
           </li>
         </ul>
       )
     },
   },
   {
-    org: 'MindX - Technology School',
-    url: 'https://mindx.edu.vn/',
-    logo: '/static/images/mindx-logo.jpeg',
-    start: 'May 2017',
-    end: 'Jul 2018',
-    title: 'Instructor and Developer',
+    org: 'Marketlive',
+    url: 'https://marketlive.com/',
+    logo: '/static/images/ml.jpeg',
+    start: 'Sep 2007',
+    end: 'Apr 2009',
+    title: 'NOC Technician II',
     icon: 'man-technologist',
-    event: 'career-mindx',
+    event: 'career-bravebits',
     details: () => {
       return (
         <ul className="[&>li]:my-2 [&>li]:pl-0">
-          <li>
-            Built{' '}
-            <a target="_blank" rel="noopener noreferrer" href="http://lok.vn/">
-              Love of Knowledge
-            </a>{' '}
-            (Front-end Developer)
+          <li> Provided website and server support for 1200+ servers for a web development e-commerce company, maintaining site availability and handling client communications.
           </li>
-          <li>
-            Built{' '}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://hta218.github.io/get-a-room-api-docs/"
-            >
-              Room Finder APIs
-            </a>{' '}
-            (Back-end Developer)
-          </li>
-          <li>
-            Built{' '}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/hta218/Travel_Egypt"
-            >
-              Travel Egypt
-            </a>{' '}
-            - a picture puzzle game made by pygame (Python)
-          </li>
-          <li>Mentored Python fundamentals and Python web development for newbies</li>
         </ul>
       )
     },

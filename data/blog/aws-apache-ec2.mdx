@@ -1,0 +1,72 @@
+---
+title: 'Install Apache on AWS Linux EC2'
+date: '2023-11-15'
+tags: ['aws', 'cloud',]
+summary: 'Guide to install Apache on AWS.'
+images:
+  [
+    '/static/images/banners/brown-wooden-house-on-green-grass-field-near-green-mountains-during-daytime__dangcong__TMa0l7fdSW8.jpeg',
+  ]
+authors: ['default']
+---
+I recently performed testing with an AWS Application Load Balancer (ALB) and needed to spin up three web servers in EC2 quickly. I decided to use the option of passing "User Data" and run Linux commands at launch to install Apache.
+
+This is a simple example, if you want to learn more, you can visit [this link](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html).
+
+# Install Apache
+
+## **Prerequisites**
+
+The examples in this article assume the following:
+
+* Your instance has a public DNS name that is reachable from the internet. For more information, see **Auto-assign Public IP** in the [Network settings](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-instance-wizard.html#liw-network-settings) section and [Create a security group](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html#create-a-base-security-group).
+    
+* The security group associated with your instance is configured to allow SSH (port 22) traffic so that you can connect to the instance to view the output log files. For more information, see [Create a Security Group](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html#create-a-base-security-group).
+    
+* Your instance is launched with an Amazon Linux 2 AMI. These instructions are intended for use with Amazon Linux 2, and the commands and directives may not work for other Linux distributions. For more information about other distributions, such as their support for cloud-init, see their specific documentation.
+    
+# The Process
+After you have met all the prerequisites, go ahead and begin to launch your instance. Select all the details for your needs- Networking, Storage, etc. and navigate to the "Advanced details" section. Scroll down to locate the "User data" section and paste the following in the text field:
+
+```bash
+#!/bin/bash
+yum update -y
+sudo yum install httpd -y
+sudo systemctl start httpd
+sudo systemctl enable httpd
+```
+
+The instance will now launch and run the commands to install Apache. When you log into the instance, you can check and confirm Apache is up and running by the following command:
+
+```bash
+service httpd status
+```
+
+For my testing purposes, I wanted to make sure I knew which web server I was hitting from the ALB. I went ahead and configured a simple web page with the following configuration steps:
+
+```bash
+sudo systemctl edit httpd
+```
+
+```bash
+#add the following line to the config file
+Directory "/var/www/html"
+```
+
+```bash
+cd /var/www/html
+
+sudo touch index.html
+```
+
+```bash
+sudo vi /var/www/html/index.html
+```
+
+After the index.html file is saved, reload the web services:
+
+```bash
+sudo systemctl reload httpd
+```
+
+That's it! Good luck with your testing!

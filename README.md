@@ -1,4 +1,4 @@
-<h1 align="center">galiata.com</h1>
+<h1 align="center">David Galiata | Blog</h1>
 
 ![site logo](https://res.cloudinary.com/dcu6gtw2y/image/upload/v1744322556/4_buulum.png)
 
@@ -21,5 +21,6 @@ This blog is hosted on [Vercel](https://vercel.com/), built with [Next.js](https
 ## Assets
 
 The images in this blog are from [Unsplash](https://unsplash.com/), gifs from [GIPHY](https://giphy.com/), and illustrations are from [Storyset](https://storyset.com/).
-🙏
-Thanks for visiting!
+
+
+🙏🙏 Thanks for visiting!

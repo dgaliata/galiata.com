@@ -1,6 +1,7 @@
 import type { Author } from 'contentlayer/generated'
 import type { ReactNode } from 'react'
 import { CareerTimeline } from '~/components/author/career'
+import { EducationTimeline } from '~/components/author/education' // Add this import
 import { SocialAccounts } from '~/components/author/social-accounts'
 import { ProfileCard } from '~/components/cards/profile'
 import { Button } from '~/components/ui/button'
@@ -34,22 +35,31 @@ export function AuthorLayout({ children }: Props) {
                 Hi there <Twemoji emoji="waving-hand" />
               </h2>
               <p>
-        I'm <strong>David Galiata</strong>, a Security Engineering Director based in <strong>Petaluma, California</strong>. I have a passion for all things <strong>cybersecurity</strong> and <strong>cloud engineering</strong>. With over <strong>15 years</strong> of IT experience, I've built and operated secure, large-scale systems for enterprise environments.
-      </p>
-      <p>
-        My expertise spans <strong>cloud infrastructure</strong>, <strong>network security</strong>, and <strong>systems consulting</strong>. I hold several industry certifications including <strong>CISM</strong>, <strong>CCSP</strong>, <strong>CCAK</strong>, and multiple <strong>AWS credentials</strong>.
-      </p>
-              <p>
-              This blog serves as a platform for sharing insights and knowledge I've gained throughout my career in cybersecurity. I believe that writing and sharing technical concepts is not only beneficial for others but also helps solidify my own understanding.
+                I'm <strong>David Galiata</strong>, a Security Engineering Director based in <strong>Petaluma, California</strong>. I have a passion for all things <strong>cybersecurity</strong> and <strong>cloud engineering</strong>. With over <strong>15 years</strong> of IT experience, I've built and operated secure, large-scale systems for enterprise environments.
               </p>
               <p>
-        My superpower is learning new technologies quickly, allowing me to adapt to security challenges and provide effective solutions.
-      </p>
+                My expertise spans <strong>cloud infrastructure</strong>, <strong>network security</strong>, and <strong>systems consulting</strong>. I hold several industry certifications including <strong>CISM</strong>, <strong>CCSP</strong>, <strong>CCAK</strong>, and multiple <strong>AWS credentials</strong>.
+              </p>
+              <p>
+                This blog serves as a platform for sharing insights and knowledge I've gained throughout my career in cybersecurity. I believe that writing and sharing technical concepts is not only beneficial for others but also helps solidify my own understanding.
+              </p>
+              <p>
+                My superpower is learning new technologies quickly, allowing me to adapt to security challenges and provide effective solutions.
+              </p>
               <p>
                 I greatly appreciate comments and thoughts on my posts{' '}
                 <Twemoji emoji="clinking-beer-mugs" />.
               </p>
             </div>
+            
+            {/* Education Section - Added BEFORE Career */}
+            <div>
+              <div className="mb-[1em] mt-[2em] flex items-center justify-between [&>h2]:my-0">
+                <h2>My education</h2>
+              </div>
+              <EducationTimeline />
+            </div>
+            
             <div>
               <div className="mb-[1em] mt-[2em] flex items-center justify-between [&>h2]:my-0">
                 <h2>My career</h2>
@@ -60,6 +70,7 @@ export function AuthorLayout({ children }: Props) {
               </div>
               <CareerTimeline />
             </div>
+            
             <div>
               <h2>Contact</h2>
               <p>
@@ -70,51 +81,6 @@ export function AuthorLayout({ children }: Props) {
               <SocialAccounts />
             </div>
             {/* Removed the Support section */}
-            {/* <div>
-              <h2>Support</h2>
-              <p>If you appreciate my work, consider supporting me:</p>
-              <div className="flex flex-col gap-4">
-                <a
-                  href={SITE_METADATA.support.buyMeACoffee}
-                  target="_blank"
-                  className="[&_.image-container]:mx-0"
-                >
-                  <Image
-                    src="/static/images/bmc-button.png"
-                    alt="Buy Me A Coffee"
-                    width={213.7}
-                    height={60}
-                    style={{ height: 60 }}
-                  />
-                </a>
-                <a
-                  href={SITE_METADATA.support.paypal}
-                  target="_blank"
-                  className="flex h-15 w-[214px] items-center rounded-lg bg-[#009cde]/70 p-1"
-                >
-                  <Image
-                    src="/static/images/paypal-logo.png"
-                    alt="Donate via PayPal"
-                    width={225.88}
-                    height={60}
-                    style={{ height: 30, width: 'auto' }}
-                  />
-                </a>
-                <a
-                  href={SITE_METADATA.support.kofi}
-                  target="_blank"
-                  className="[&_.image-container]:mx-0"
-                >
-                  <Image
-                    src="/static/images/kofi.png"
-                    alt="Support me on Ko-fi"
-                    width={297}
-                    height={60}
-                    style={{ height: 60, width: 'auto' }}
-                  />
-                </a>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>

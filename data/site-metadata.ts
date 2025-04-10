@@ -26,7 +26,7 @@ export const SITE_METADATA = {
   analytics: {
     umamiAnalytics: {
       websiteId: process.env.NEXT_UMAMI_ID,
-      shareUrl: 'https://analytics.leohuynh.dev/share/c9ErglxqzY5CQJ8g/leohuynh.dev',
+      shareUrl: 'https://cloud.umami.is/share/eFPdpFk3fNDufAOb/galiata.com',
     },
   },
   newsletter: {

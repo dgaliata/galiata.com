@@ -1,6 +1,6 @@
 export const SITE_METADATA = {
   title: `David's tech blog – stories, insights, and ideas`,
-  author: 'Leo Huynh',
+  author: 'David Galiata',
   headerTitle: `David's tech blog`,
   description:
     'A personal space where I share security insights, perspectives, and tech reflections from my journey in the industry.',
@@ -25,7 +25,7 @@ export const SITE_METADATA = {
   //imdbRatingsList: 'https://www.imdb.com/user/ur154483197/ratings/?view=grid',
   analytics: {
     umamiAnalytics: {
-      websiteId: process.env.NEXT_UMAMI_ID,
+      websiteId: 'b69c27ce-feac-45db-a6ce-ab7da3c62126',
       shareUrl: 'https://cloud.umami.is/share/eFPdpFk3fNDufAOb/galiata.com',
     },
   },

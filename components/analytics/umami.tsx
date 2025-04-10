@@ -13,7 +13,7 @@ export function UmamiAnalytics({
     <Script 
       src={src}
       data-website-id={websiteId}
-      strategy="afterInteractive"
+      strategy="beforeInteractive"
     />
   )
 }

@@ -5,7 +5,7 @@ import { FooterMeta } from './footer-meta'
 import { FooterBottom } from './footer-bottom'
 import { FooterNav } from './footer-nav'
 import { LogoAndRepo } from './logo-and-repo'
-import { Signature } from './signature'
+import Signature  from './signature'
 
 export function Footer() {
   return (

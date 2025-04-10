@@ -126,7 +126,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       >
         <TiltedGridBackground className="inset-x-0 top-0 z-[-1] h-[50vh]" />
         <ThemeProviders>
-        <UmamiAnalytics />
+        <UmamiAnalytics websiteId="b69c27ce-feac-45db-a6ce-ab7da3c62126" />
           <KBarSearchProvider configs={SITE_METADATA.search.kbarConfigs}>
             <Header />
             <main className="mb-auto grow">{children}</main>

@@ -91,6 +91,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       )}
       suppressHydrationWarning
     >
+    <head>
       <UmamiAnalytics />
       <link rel="apple-touch-icon" sizes="76x76" href={`${basePath}/static/favicons/favicon.ico`} />
       <link
@@ -115,6 +116,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
+      </head>
       <body
         className={clsx([
           'antialiased',

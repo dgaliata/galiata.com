@@ -5,7 +5,7 @@ export const PROJECTS: Project[] = [
     type: 'work',
     title: 'Weaverse Hydrogen Customizer',
     description: `The first Hydrogen-driven website builder powered by AI. Weaverse is a Shopify sales channel that allows you to create a website in minutes with no coding required.`,
-    imgSrc: '/static/images/weaverse-logo.png',
+    imgSrc: '/static/images/icloud.png',
     url: 'https://www.weaverse.io?ref=leohuynh.dev',
     builtWith: ['Shopify', 'Remix', 'TailwindCSS', 'Prisma', 'OpenAI'],
     links: [
@@ -18,7 +18,7 @@ export const PROJECTS: Project[] = [
     title: 'Weaverse SDKs',
     description:
       'Open-source toolkits for seamless integration and development of Shopify Hydrogen themes and headless commerce solutions.',
-    imgSrc: '/static/images/weaverse-logo.png',
+    imgSrc: '/static/images/shield.png',
     repo: 'weaverse/weaverse',
     builtWith: ['Turborepo', 'Hydrogen', 'React', 'Typescript'],
   },
@@ -27,7 +27,7 @@ export const PROJECTS: Project[] = [
     title: 'Pilot - Shopify Hydrogen theme',
     description:
       'A fully-featured Shopify Hydrogen theme crafted to help you launch modern, high-performing headless storefronts in minutes.',
-    imgSrc: '/static/images/theme-100.png',
+    imgSrc: '/static/images/linux.png',
     repo: 'weaverse/pilot',
     url: 'https://pilot.weaverse.io/',
     builtWith: ['Hydrogen', 'Remix', 'TailwindCSS', 'HeadlessUI'],
@@ -36,7 +36,7 @@ export const PROJECTS: Project[] = [
     type: 'work',
     title: 'Minimog - Next-gen Shopify theme',
     description: `The Next Generation of highest-converting and extensible Shopify theme (Weekly bestseller & Top trending in Themeforest eCommerce category).`,
-    imgSrc: '/static/images/brush-96.png',
+    imgSrc: '/static/images/devbox.png',
     url: 'https://themeforest.net/item/minimog-the-high-converting-shopify-theme/33380968?ref=leohuynh.dev',
     builtWith: ['ThemeKit', 'Liquid', 'Webpack', 'TailwindCSS'],
     links: [
@@ -51,7 +51,7 @@ export const PROJECTS: Project[] = [
     type: 'work',
     title: 'FoxKit AIO Upsell Cross‑sell',
     description: `The upsells and boost conversion tools that is built to support Minimog theme.`,
-    imgSrc: '/static/images/sale-price-tag-96.png',
+    imgSrc: '/static/images/jira.png',
     url: 'https://apps.shopify.com/foxkit?ref=leohuynh.dev',
     builtWith: ['KoaJS', 'JWT', 'MongoDB', 'Polaris'],
     links: [

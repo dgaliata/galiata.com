@@ -20,7 +20,7 @@ export function AuthorLayout({ children }: Props) {
     <Container className="pt-4 lg:pt-12">
       <PageHeader
         title="About"
-        description="A bit of background on who I am, what I do, and why I started this blog. Nothing too serious, just a little intro to the person typing away behind the scenes."
+        description="A bit of background on who I am, what I do, and why I started this blog. Nothing too serious, just a little intro to the person typing behind the scenes."
         className="border-b border-gray-200 dark:border-gray-700"
       />
       <div className="py-8 md:grid md:grid-cols-3">
@@ -43,7 +43,7 @@ export function AuthorLayout({ children }: Props) {
               This blog serves as a platform for sharing insights and knowledge I've gained throughout my career in cybersecurity. I believe that writing and sharing technical concepts is not only beneficial for others but also helps solidify my own understanding.
               </p>
               <p>
-        My superpower is learning new technologies quickly, allowing me to adapt to evolving security challenges and provide effective solutions. I'm always excited to connect with fellow security professionals <Twemoji emoji="shield" />.
+        My superpower is learning new technologies quickly, allowing me to adapt to security challenges and provide effective solutions.
       </p>
               <p>
                 I greatly appreciate comments and thoughts on my posts{' '}

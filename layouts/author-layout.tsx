@@ -31,24 +31,21 @@ export function AuthorLayout({ children }: Props) {
           <div className="prose prose-lg dark:prose-invert">
             <div>
               <h2 className="mt-0">
-                Hi there <Twemoji emoji="waving-hand" />
-              </h2>
-              <p>
-                I'm <strong>Tuan Anh Huynh</strong> (alias <strong>Leo</strong> at work), a software
-                engineer from <strong>Vietnam</strong>. I have a passion for all things{' '}
-                <strong>Javascript</strong>. I enjoy building eCommerce software and stuff related
-                to web dev. I work mainly with <strong>Typescript</strong>, <strong>React</strong>,{' '}
-                <strong>NodeJS</strong>, <strong>Remix</strong>, and <strong>TailwindCSS</strong>.
-              </p>
-              <p>
-                This blog serves as a journal for documenting and sharing the insights and knowledge
-                I've gained as a software engineer. Building, writing, and sharing things is a great
-                way for me to solidify my understanding of new concepts and ideas.
-              </p>
-              <p>
-                I would greatly appreciate any comments and thoughts on my posts{' '}
-                <Twemoji emoji="clinking-beer-mugs" />.
-              </p>
+              <h2 className="text-xl font-bold md:text-2xl">
+  Hi there <Twemoji emoji="waving-hand" />
+</h2>
+<p>
+  I'm <strong>David Galiata</strong>, a Security Engineering Director based in <strong>Petaluma, California</strong>. I have a passion for all things <strong>cybersecurity</strong> and <strong>cloud engineering</strong>. With over <strong>15 years</strong> of IT experience, I've built and operated secure, large-scale systems for enterprise environments.
+</p>
+<p>
+  My expertise spans <strong>cloud infrastructure</strong>, <strong>network security</strong>, and <strong>systems consulting</strong>. I hold several industry certifications including <strong>CISM</strong>, <strong>CCSP</strong>, <strong>CCAK</strong>, and multiple <strong>AWS credentials</strong>.
+</p>
+<p>
+  This blog serves as a platform for sharing insights and knowledge I've gained throughout my career in cybersecurity. I believe that writing and sharing technical concepts is not only beneficial for others but also helps solidify my own understanding.
+</p>
+<p>
+  My superpower is learning new technologies quickly, allowing me to adapt to evolving security challenges and provide effective solutions. I'm always excited to connect with fellow security professionals <Twemoji emoji="shield" />.
+</p>
             </div>
             <div>
               <div className="mb-[1em] mt-[2em] flex items-center justify-between [&>h2]:my-0">
@@ -59,118 +56,6 @@ export function AuthorLayout({ children }: Props) {
                 </Button>
               </div>
               <CareerTimeline />
-            </div>
-            <div>
-              <h2>Tech stack</h2>
-              <p>
-                This blog is hosted on{' '}
-                <a href="https://vercel.com/" target="_blank">
-                  Vercel
-                </a>
-                , built with{' '}
-                <a href="https://nextjs.org/" target="_blank">
-                  Next.js
-                </a>{' '}
-                and{' '}
-                <a href="https://tailwindcss.com/" target="_blank">
-                  Tailwind CSS
-                </a>{' '}
-                using <strong>Tailwind Nextjs Starter Blog</strong>.
-              </p>
-              <p>
-                A huge thanks to{' '}
-                <a href="https://twitter.com/timlrxx" target="_blank">
-                  Timothy Lin
-                </a>{' '}
-                for the minimal, lightweight, and super easy-to-customize blog starter.
-              </p>
-              <p>A few major over-engineering-changes from the original repo:</p>
-              <ul>
-                <li>
-                  <Twemoji emoji="atom-symbol" /> Upgrading to <strong>React v18</strong>,{' '}
-                  <strong>Next v14</strong>
-                  (Using App router)
-                </li>
-                <li>
-                  <Twemoji emoji="party-popper" /> Adopting <strong>Typescript</strong>, committing
-                  with{' '}
-                  <a href="https://www.conventionalcommits.org/" target="_blank">
-                    Conventional Commits
-                  </a>
-                </li>
-                <li>
-                  <Twemoji emoji="bar-chart" /> Monitoring site with{' '}
-                  <a href="https://umami.is/" target="_blank">
-                    Umami
-                  </a>{' '}
-                  website analytics
-                </li>
-                <li>
-                  <Twemoji emoji="eyes" /> Theming in dark mode with{' '}
-                  <a
-                    href="https://github.blog/changelog/2021-04-14-dark-and-dimmed-themes-are-now-generally-available/"
-                    target="_blank"
-                  >
-                    Github dark dimmed
-                  </a>{' '}
-                  colors for better contrast
-                </li>
-                <li>
-                  <Twemoji emoji="man-technologist" /> Making a lot of changes to the UI, new
-                  homepage design, adding <code>ProfileCard</code>, <code>CareerTimeline</code>{' '}
-                  components, adding <code>/snippets</code>, <code>/books</code>,{' '}
-                  <code>/movies</code> page, etc.
-                </li>
-              </ul>
-              <p>
-                See my{' '}
-                <a href="https://github.com/hta218/leohuynh.dev" target="_blank">
-                  Github repository
-                </a>{' '}
-                for this blog.
-              </p>
-              <div>
-                <h3>Legacy versions</h3>
-                <p>I started this blog since 2019 and up until now it has 2 legacy versions:</p>
-                <ul>
-                  <li>
-                    <code>v1</code> built with <strong>NextJS v13</strong> using Page router:{' '}
-                    <a
-                      href="https://leohuynhdev-git-v1-leo-huynhs-projects.vercel.app/"
-                      target="_blank"
-                    >
-                      https://leohuynhdev-git-v1-leo-huynhs-projects.vercel.app/
-                    </a>
-                  </li>
-                  <li>
-                    <code>v0</code> built with <strong>Gatsby</strong>:{' '}
-                    <a href="https://leo-blog-legacy.vercel.app/" target="_blank">
-                      https://leo-blog-legacy.vercel.app/
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div>
-              <h2>Assets</h2>
-              <p>
-                Most of the images in my blog are from{' '}
-                <a href="https://unsplash.com/" target="_blank">
-                  Unsplash
-                </a>
-                , gifs from{' '}
-                <a href="https://giphy.com/" target="_blank">
-                  GIPHY
-                </a>
-                , and illustrations are from{' '}
-                <a href="https://storyset.com/" target="_blank">
-                  Storyset
-                </a>
-                .
-              </p>
-              <p>
-                Thanks for the free resources <Twemoji emoji="folded-hands" />.
-              </p>
             </div>
             <div>
               <h2>Contact</h2>

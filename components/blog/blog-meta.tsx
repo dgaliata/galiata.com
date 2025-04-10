@@ -1,6 +1,6 @@
 import type readingTime from 'reading-time'
 import { formatDate, getTimeAgo } from '~/utils/misc'
-import { ViewsCounter } from './views-counter'
+//import { ViewsCounter } from './views-counter'
 
 type BlogMetaProps = {
   date: string
@@ -29,9 +29,9 @@ export function BlogMeta({ date, lastmod, type, slug, readingTime }: BlogMetaPro
         </time>
         <span className="text-gray-300 dark:text-gray-700">/</span>
         <span>{Math.ceil(readingTime.minutes)} mins read</span>
-        <span className="text-gray-300 dark:text-gray-700">/</span>
-        {/* Pass 'type' to ViewsCounter */}
-        <ViewsCounter type={type} slug={slug} />
+        {/* Remove the divider and ViewsCounter below */}
+        {/* <span className="text-gray-300 dark:text-gray-700">/</span> */}
+        {/* <ViewsCounter type={type} slug={slug} /> */}
       </dd>
     </dl>
   )

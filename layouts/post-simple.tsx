@@ -4,7 +4,6 @@ import { clsx } from 'clsx'
 import type { Blog, Snippet } from 'contentlayer/generated'
 import type { ReactNode } from 'react'
 import { BlogMeta } from '~/components/blog/blog-meta'
-import { Comments } from '~/components/blog/comments'
 import { DiscussOnX } from '~/components/blog/discuss-on-x'
 import { EditOnGithub } from '~/components/blog/edit-on-github'
 import { PostTitle } from '~/components/blog/post-title'
@@ -60,7 +59,6 @@ export function PostSimple({ content, children }: PostSimpleProps) {
             </div>
             <SocialShare postUrl={postUrl} filePath={filePath} title={title} />
           </div> */}
-          <Comments />
         </div>
       </article>
     </Container>

@@ -7,6 +7,7 @@ import clsx from 'clsx'
 import type { Metadata } from 'next'
 import { JetBrains_Mono, Nunito, Playpen_Sans } from 'next/font/google'
 import Script from 'next/script'
+import { UmamiAnalytics } from '~/components/analytics/umami'
 import { Footer } from '~/components/footer'
 import { Header } from '~/components/header'
 import { KBarSearchProvider } from '~/components/search/kbar-provider'
@@ -92,7 +93,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       suppressHydrationWarning
     >
     <head>
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="b69c27ce-feac-45db-a6ce-ab7da3c62126"></script>
       <link rel="apple-touch-icon" sizes="76x76" href={`${basePath}/static/favicons/favicon.ico`} />
       <link
         rel="icon"
@@ -134,6 +134,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </KBarSearchProvider>
           <Footer />
         </ThemeProviders>
+        <UmamiAnalytics />
       </body>
     </html>
   )

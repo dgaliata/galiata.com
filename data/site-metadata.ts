@@ -25,7 +25,7 @@ export const SITE_METADATA = {
   //imdbRatingsList: 'https://www.imdb.com/user/ur154483197/ratings/?view=grid',
   analytics: {
     umamiAnalytics: {
-      websiteId: 'b69c27ce-feac-45db-a6ce-ab7da3c62126',
+      websiteId: 'a0ae633a-0a24-4457-a8ae-0e65024444df',
       shareUrl: 'https://cloud.umami.is/share/Z5PXJYkfEo9ZJl7C/galiata.com',
     },
   },

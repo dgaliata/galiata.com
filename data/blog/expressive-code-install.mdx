@@ -1,0 +1,100 @@
+---
+title: 'Installing Expressive Code on Astro'
+date: '2024-11-15'
+tags: ['astro']
+summary: 'How to install Expressive Code on an Astro blog.'
+images:
+  [
+    '/static/images/banners/a-computer-on-a-desk__growtika__FQ3lFA4Zi58.jpg',
+  ]
+authors: ['default']
+---
+
+# Adding Code Block Superpowers with Expressive Code
+
+Earlier this year, I revamped my blog with a fresh new theme. While the new design was an improvement, there was one small thing that kept bugging me: no copy button on code blocks. You know that feeling when you're reading a technical blog post and want to quickly grab a code snippet, but have to manually select everything? Yeah, that was my blog for the past few months.
+
+## The Solution: Expressive Code
+
+I finally got around to fixing this today by implementing [Expressive Code](https://expressive-code.com/) in my Astro blog. I found out about it while researching random articles about adding a copy code block to an Astro site. Expressive Code is a neat code block enhancement package that not only adds a copy button but brings a suite of other features like:
+
+- Syntax highlighting
+- Code frame UI
+- Light/dark theme support
+- Line numbers
+- Line highlighting
+- Word wrap options
+
+## Implementation Journey
+
+The setup process was straightforward, but I did hit a small gotcha that's worth sharing. Here's how I did it:
+
+1. First, installed the package on my local machine:
+```bash
+npm install astro-expressive-code
+```
+
+2. Added it to my astro.config.mjs:
+```javascript
+import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx';
+import sitemap from '@astrojs/sitemap';
+import tailwind from "@astrojs/tailwind";
+import solidJs from "@astrojs/solid-js";
+import { SITE_METADATA } from "./src/consts.ts";
+import metaTags from "astro-meta-tags";
+import robotsTxt from "astro-robots-txt";
+import expressiveCode from 'astro-expressive-code'
+
+export default defineConfig({
+  prefetch: true,
+  site: SITE_METADATA.siteUrl,
+  integrations: [
+    // Move expressiveCode before mdx
+    expressiveCode({
+      themes: ['aurora-x'],
+      styleOverrides: {
+        frames: {
+          editorActiveTabIndicatorTopColor: 'transparent',
+          editorActiveTabBorderColor: '#80808080',
+          editorTabBarBorderBottomColor: '#80808080',
+          tooltipSuccessBackground: 'black'
+        },
+        uiFontFamily: 'inherit',
+        borderColor: '#80808080'
+      }
+    }),
+    mdx(), 
+    sitemap(), 
+    tailwind(), 
+    solidJs(), 
+    metaTags(), 
+    robotsTxt()
+  ]
+});
+```
+3. Pushed it to my repo
+```bash
+git add .
+git commit -m "Installing Expressive Code"
+git push origin main
+```
+
+### The Gotcha: Integration Order Matters
+
+Here's where I hit a small snag: initially, I placed the Expressive Code integration after my MDX integration, which resulted in an error. Luckily the Vercel deployment logs told me exactly what the issue was- Expressive Code needs to process the code blocks before MDX does its thing, so the integration needed to be placed before `mdx()` in the integrations array.
+
+This makes sense when you think about it: Expressive Code needs to enhance the code blocks before they get processed by MDX. It's a case of order of operations being important in build configurations.
+
+## The Result
+
+Now my code blocks look much better and are more functional. They have:
+- A sleek copy button
+- Proper syntax highlighting that respects the site's theme
+- A nice frame UI that makes code blocks stand out
+- Better visual integration with my site's design thanks to the style customizations
+
+## Conclusion
+
+Sometimes small improvements make a big difference in user experience. Adding Expressive Code was one of those "why didn't I do this sooner?" updates. If you're running an Astro blog and haven't added proper code block functionality yet, I highly recommend giving Expressive Code a try. I might even look at some other themes and tweak it further. 
+

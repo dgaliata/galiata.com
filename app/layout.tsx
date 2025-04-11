@@ -92,7 +92,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       suppressHydrationWarning
     >
     <head>
-      <UmamiAnalytics />
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="b69c27ce-feac-45db-a6ce-ab7da3c62126"></script>
       <link rel="apple-touch-icon" sizes="76x76" href={`${basePath}/static/favicons/favicon.ico`} />
       <link
         rel="icon"

@@ -1,4 +1,5 @@
 import Script from 'next/script'
+import { SITE_METADATA } from '~/data/site-metadata'
 
 interface UmamiAnalyticsProps {
   websiteId?: string
@@ -6,14 +7,14 @@ interface UmamiAnalyticsProps {
 }
 
 export function UmamiAnalytics({ 
-  websiteId = "b69c27ce-feac-45db-a6ce-ab7da3c62126",
+  websiteId = SITE_METADATA.analytics.umamiAnalytics.websiteId,
   src = 'https://cloud.umami.is/script.js' 
 }: UmamiAnalyticsProps) {
   return (
     <Script 
       src={src}
       data-website-id={websiteId}
-      strategy="beforeInteractive"
+      strategy="afterInteractive"
     />
   )
 }

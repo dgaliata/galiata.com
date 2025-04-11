@@ -41,6 +41,6 @@ export const SITE_METADATA = {
     },
   },
   support: {
-    buyMeACoffee: 'https://www.buymeacoffee.com/leohuynh.dev',
+    buyMeACoffee: 'https://www.buymeacoffee.com/dgaliata',
   },
 }

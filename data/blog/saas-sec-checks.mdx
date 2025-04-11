@@ -1,0 +1,59 @@
+---
+title: 'The Anatomy of SSPM Checks'
+date: '2024-04-08'
+tags: ['cybersecurity', 'saas']
+summary: 'Exploring the crucial components within SSPM security checks.'
+images:
+  [
+    '/static/images/banners/diagram__oscarmackey__fj3vw9MYeU.jpg',
+  ]
+authors: ['default']
+---
+
+Securing the attack surface created by the [explosion of SaaS](https://www.engineering.com/story/explosion-in-saas-usage-is-a-double-edged-sword-for-engineers) apps in enterprises is an increasingly complex challenge. Staying on top of and maintaining these controls across apps such as Salesforce, Box, Office 365, Slack, and countless other apps is no small task.
+
+SaaS security posture management (SSPM) platforms are purpose-built to systematically harden security defenses across cloud apps. Leveraging automated continuous assessments, these tools scan settings using specialized checks that provide security teams with the details needed to evaluate risks and confidently remediate issues.
+
+But what exactly comprises these SSPM checks that makes them so useful for securing expansive SaaS footprints? Let's examine some of the details included in these checks and see how they empower organizations to minimize risk.
+
+# SSPM Check Examples
+
+## **Security Domain**
+
+Categorizes the area checked - access control, data leakage protection, etc. This allows filtering issues by each domain.
+
+For example, identifying that a check falls under the access control domain enables security teams to quickly filter and identify excessive permissions that may allow unintended data access.
+
+## **Impact Level**
+
+Prioritizes risks as low, medium, high, or critical. Enables remediation based on potential impact.
+
+For instance, an impact level of "critical" assigned to a check failing to enforce multi-factor authentication for admins signals that remediating this should be the top priority due to the high degree of access admins have across the entire SaaS app.
+
+## **Affected Users**
+
+Scopes the impact by indicating affected users and roles. This is crucial for risk analysis.
+
+Knowing a failed password policy check applies to all users in the marketing department allows for an accurate risk assessment of the potential extent of the issue.
+
+## **Remediation Instructions**
+
+Provides step-by-step fixes to efficiently configure settings. Integrates with ticketing systems and often has links to knowledge base (KB) articles from the vendor.
+
+For example, instructions may detail navigating to a specific admin panel, selecting the checkbox to enforce password complexity, and clicking save. This allows for faster remediation.
+
+## **Reason for Alert**
+
+Explains the risks of misconfigurations for accountability.
+
+Plain-language explanations create an understanding of threats. For instance, a lack of logging could allow malicious activity to go undetected.
+
+## **History Log**
+
+An auditable trail of actions taken provides details for transparency.
+
+Logs provide visibility into who dismissed an alert and when, along with any comments left. This is useful during audits.
+
+# Conclusion
+
+The wide range of information provided in each SSPM security check makes continuous monitoring and hardening of an organization's SaaS security posture achievable. Teams are enabled to efficiently identify and remediate issues based on contextual risk levels.

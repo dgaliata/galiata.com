@@ -1,0 +1,84 @@
+---
+title: 'Creating GitHub Repositories from CLI'
+date: '2025-01-15'
+tags: ['git', 'github']
+summary: 'Quickly create a GitHub repository from the command line'
+images:
+  [
+    '/static/images/banners/black-and-blue-square-illustration__flyd__B6eNd1W1Cic.jpg',
+  ]
+authors: ['default']
+---
+Picture this: You've just built a small app and want to share it with the world. Let's learn how to create a GitHub repository straight from your terminal.
+
+## Prerequisites
+
+```bash
+# Install GitHub CLI
+# macOS
+brew install gh
+
+# Windows
+winget install GitHub.cli
+```
+
+## Quick Setup
+
+Navigate to your project:
+```bash
+cd ~/projects/weather-dashboard
+```
+
+Initialize Git:
+```bash
+git init
+git add .
+git commit -m "First forecast: Initial commit"
+```
+
+Authenticate with GitHub:
+```bash
+gh auth login
+```
+
+Create and push your repository:
+```bash
+gh repo create weather-wizard --public --source=. --push
+```
+
+## Command Breakdown
+
+Let's analyze that last command:
+- `weather-wizard`: Repository name
+- `--public`: Makes it visible to everyone
+- `--source=.`: Uses current directory
+- `--push`: Uploads files automatically
+
+## Advanced Options
+
+Add metadata:
+```bash
+gh repo create climate-tracker \
+  --description "Real-time weather monitoring dashboard" \
+  --homepage "https://weather-app.example.com" \
+  --public --source=. --push
+```
+
+Create with license:
+```bash
+gh repo create forecast-pro --license "mit" --public --source=. --push
+```
+
+## Troubleshooting
+
+Common issues:
+- Repository names must use hyphens instead of spaces
+- For private repos, swap `--public` with `--private`
+- Conflicts? Use `--remote-name origin`
+
+## Final Thoughts
+
+GitHub CLI transforms repository creation into a streamlined process. No more context switching between terminal and browser - just efficient, focused development.
+
+---
+*Written for folks who value their time*

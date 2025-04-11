@@ -1,0 +1,37 @@
+---
+title: 'Freeradius service will not start'
+date: '2021-02-02'
+tags: ['linux']
+summary: 'Troubleshoot when the Freeradius service will not start on your server.'
+images:
+  [
+    '/static/images/banners/a-close-up-of-a-cell-phone-with-a-blue-and-pink-background__stevenjohnson__Nbdw-uPgHBQ.jpg',
+  ]
+authors: ['default']
+---
+Earlier today I made a simple change to a freeradius server at one of my clients. After making this change, I attempted to restart the service. I received the following error:
+
+
+```python
+root@ucs:~# systemctl restart freeradius
+Job for freeradius.service failed because the control process exited with error code.
+See "systemctl status freeradius.service" and "journalctl -xe" for details.
+```
+# Troubleshooting Steps 
+
+This created an issue for me as this radius server handles the authentication for a VPN with MFA.
+
+Based on the error message, I ran the following command-
+
+```python
+journalctl -xe
+```
+
+Which showed me the following output-
+
+```python
+/etc/freeradius/3.0/mods-config/files/authorize[222]: Parse error (check) for entry myusername: Expected end of line or comma
+```
+# Conclusion 
+
+One of the changes I made was a password change for myusername. After checking the error message, I realized you cannot have the \* symbol as the last character in the password. This throws off freeradius and will not allow the service to start. After adjusting this I was able to start the service and keep the login working.

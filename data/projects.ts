@@ -91,8 +91,7 @@ export const PROJECTS: Project[] = [
   {
     type: 'self',
     title: 'Magnolia Project',
-    description: `The Magnolia Project is designed to showcase my skills in deploying a secure, automated cloud infrastructure using modern DevOps practices.`,
-    href: 'https://magnolia-project.hashnode.space/project-docs/project-overview',
+    description: `The Magnolia Project is designed to showcase my skills in deploying a secure, automated cloud infrastructure using modern DevOps practices. View docs: https://magnolia-project.hashnode.space/project-docs/project-overview`,
     imgSrc: '/static/images/magnolia.png',
     builtWith: [
       'Infrastructure as Code',

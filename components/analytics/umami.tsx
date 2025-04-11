@@ -6,18 +6,11 @@ interface UmamiAnalyticsProps {
 }
 
 export function UmamiAnalytics({ 
-  websiteId = "b69c27ce-feac-45db-a6ce-ab7da3c62126", 
+  websiteId, 
   src = 'https://cloud.umami.is/script.js' 
 }: UmamiAnalyticsProps) {
-  if (!websiteId) return null;
-  
-  return (
-    <Script 
-      async 
-      defer 
-      data-website-id={websiteId} 
-      src={src}
-      strategy="afterInteractive"
-    />
-  )
+  if (websiteId) {
+    return <Script async defer data-website-id={websiteId} src={src} />
+  }
+  return null
 }

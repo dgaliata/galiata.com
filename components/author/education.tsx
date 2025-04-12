@@ -9,7 +9,7 @@ const EDUCATION = [
   {
     org: 'Central Washington University',
     url: 'https://www.CWU.edu/',
-    logo: '/static/images/cwu.png',
+    logo: '/static/images/cwu_logo.png',
     start: '2023',
     end: '2024',
     title: 'Master of Science in Cybersecurity Management',
@@ -28,7 +28,7 @@ const EDUCATION = [
   {
     org: 'Western Governors University',
     url: 'https://www.WGU.edu/',
-    logo: '/static/images/wgu.png',
+    logo: '/static/images/wgu_logo.png',
     start: '2009',
     end: '2011',
     title: 'Bachelor of Science in Information Technology',

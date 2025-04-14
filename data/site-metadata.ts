@@ -1,7 +1,7 @@
 export const SITE_METADATA = {
-  title: `David's tech blog – stories, insights, and ideas`,
+  title: `David Galiata's tech blog – stories, insights, and ideas`,
   author: 'David Galiata',
-  headerTitle: `David's tech blog`,
+  headerTitle: `David Galiata's tech blog`,
   description:
     'A personal space where I share security insights, perspectives, and tech reflections from my journey in the industry.',
   language: 'en-us',

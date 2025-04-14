@@ -89,6 +89,27 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
+    type: 'work',
+    title: 'Professional Certifications',
+    description: `Certifications in various domains, including cloud computing and cybersecurity.`,
+    url: 'https://www.credly.com/users/david-galiata',
+    imgSrc: '/static/images/cert.png',
+    builtWith: [
+      'ISACA	Certified Information Security Manager (CISM)',
+      '(ISC)²	Certified Cloud Security Professional (CCSP)',
+      '(ISC)²	Certified in Cybersecurity (CC)',
+      'Cloud Security Alliance & ISACA Certificate of Cloud Auditing Knowledge (CCAK)',
+      'Cloud Security Alliance Certificate of Competence in Zero Trust (CCZT)',
+      'Amazon (AWS) Certified SysOps Administrator Associate',
+      'Amazon (AWS)Certified Cloud Practitioner',
+      'GitHub	GitHub Foundations',
+      'Gitlab	GitLab Certified Associate CI/CD',
+      'Gitlab Certified Security Specialist',
+      'Microsoft Azure Fundamentals (AZ-900)',
+      'CompTIA A+, Network +, and Project+'
+    ],
+  },
+  {
     type: 'self',
     title: 'Magnolia Project',
     description: `The Magnolia Project is designed to showcase my skills in deploying a secure, automated cloud infrastructure using modern DevOps practices.'`,

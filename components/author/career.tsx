@@ -117,6 +117,24 @@ const EXPERIENCES = [
       )
     },
   },
+  {
+    org: 'Syntechs contract through Dell',
+    url: 'https://dell.com/',
+    logo: '/static/images/dell.jpeg',
+    start: 'Aug 2006',
+    end: 'Sep 2007',
+    title: 'Computer Hardware Technician',
+    icon: 'man-technologist',
+    event: 'career-bravebits',
+    details: () => {
+      return (
+        <ul className="[&>li]:my-2 [&>li]:pl-0">
+          <li> Provided hardware repair for Dell laptop and desktop computers.
+          </li>
+        </ul>
+      )
+    },
+  },
 ]
 export function CareerTimeline() {
   return (

@@ -45,7 +45,7 @@ export function TypedBios() {
         <li>I live in the SF Bay Area. <Twemoji emoji="bridge-at-night" /></li>
         <li>I was born in beautiful Sonoma County.</li>
         <li>I fell in love with technology in 1994.<Twemoji emoji="desktop-computer" /></li>
-        <li>I love cybersecurity.</li>
+        <li>I enjoy working in cybersecurity.</li>
         <li>I'm focusing on building secure, resilient solutions.<Twemoji emoji="hammer-and-wrench" /></li>
         <li>I work mostly with cloud technologies.</li>
         <li>I'm Brooke's husband and Ben, Preston, and Reid's dad.</li>

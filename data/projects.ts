@@ -131,6 +131,22 @@ export const PROJECTS: Project[] = [
   },
   {
     type: 'self',
+    title: 'AI Security Risk Assessment Tool',
+    description: `Based on the AWS Generative AI Security Scoping Matrix.'`,
+    url: 'https://ai-risk-scoping-tool-frontend.onrender.com/',
+    imgSrc: '/static/images/ai-risk-tool.png',
+    builtWith: [
+      'Python',
+      'FastAPI',
+      'AI',
+      'Risk Assessment',
+      'Security',
+      'AWS'
+      
+    ],
+  },
+  {
+    type: 'self',
     title: 'galiata.com',
     description: `My personal website and portfolio showcasing my work, projects, and blog posts.`,
     imgSrc: '/static/images/3.png',

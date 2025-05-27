@@ -113,7 +113,7 @@ export const PROJECTS: Project[] = [
   {
     type: 'self',
     title: 'Magnolia Project',
-    description: `The Magnolia Project is designed to showcase my skills in deploying a secure, automated cloud infrastructure using modern DevOps practices.'`,
+    description: `The Magnolia Project is designed to showcase my skills in deploying a secure, automated cloud infrastructure using modern DevOps practices.`,
     url: 'https://magnolia-project.hashnode.space/project-docs/project-overview',
     imgSrc: '/static/images/magnolia.png',
     builtWith: [
@@ -132,7 +132,7 @@ export const PROJECTS: Project[] = [
   {
     type: 'self',
     title: 'AI Security Risk Assessment Tool',
-    description: `Based on the AWS Generative AI Security Scoping Matrix.'`,
+    description: `Based on the AWS Generative AI Security Scoping Matrix.`,
     url: 'https://ai-risk-scoping-tool-frontend.onrender.com/',
     imgSrc: '/static/images/ai-risk-tool.png',
     builtWith: [

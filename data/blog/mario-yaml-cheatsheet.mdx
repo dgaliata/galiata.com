@@ -1,0 +1,371 @@
+---
+title: 'Mario YAML Cheatsheet'
+date: '2025-06-07'
+tags: ['yaml']
+summary: 'The cheatsheet I wish I had when I first started learning YAML.'
+images:
+  [
+    '/static/images/super-mario-figurine-on-black-surface__raymondchiu__sMSPxhLl3XA.jpg',
+  ]
+authors: ['default']
+---
+# Mario Bros YAML Cheat Sheet for DevOps and Security Engineers
+
+## Introduction
+
+This year has been all about leveling up my DevOps skills. I completed several training modules from GitLab, worked on personal projects, and am currently diving head first into GitHub Actions. With that being said, learning YAML has been high on my list. As configuration files become more complex mastering YAML syntax while keeping security best practices in mind has become essential. I've put together this Mario Bros-themed cheat sheet (I am a huge Nintendo fan) to make the learning process more engaging while covering the key concepts every DevOps security engineer should know.
+
+## Basic YAML Structure
+
+### Document Start/End
+```yaml
+---
+# Start of YAML document (like starting World 1-1!)
+princess: peach
+castle: another
+...
+# End of document (flagpole reached!)
+```
+
+### Key-Value Pairs (Power-Up Basics)
+```yaml
+---
+hero: mario
+sidekick: luigi
+enemy: bowser
+power_level: 9001
+has_fire_flower: true
+coins_collected: 2500
+```
+
+## Security-First Examples
+
+### Secure Configuration Management
+```yaml
+---
+# ✅ GOOD: Using environment variables for secrets
+mario_config:
+  name: mario
+  password: ${MARIO_PASSWORD}  # Never hardcode!
+  api_key: ${SUPER_MARIO_API_KEY}
+  
+# BAD: Hardcoded secrets (Bowser can see these!)
+# password: "princess_peach_123"
+# api_key: "sk-12345678901234567890"
+```
+
+### Container Security (Pipe Network)
+```yaml
+---
+pipe_network:
+  image: "mario/super-plumber:v1.2.3"  # Always pin versions!
+  security_context:
+    run_as_non_root: true
+    run_as_user: 1000  # Don't run as root Mario!
+    read_only_root_filesystem: true
+    allow_privilege_escalation: false
+  resources:
+    limits:
+      memory: "512Mi"  # Prevent memory bomb-ombs
+      cpu: "500m"
+    requests:
+      memory: "256Mi"
+      cpu: "250m"
+```
+
+## Data Types (Power-Up Collection)
+
+### Strings (Dialogue Boxes)
+```yaml
+---
+# Unquoted strings
+princess_message: Thank you Mario! But our princess is in another castle!
+
+# Quoted strings (escape sequences work)
+mario_speech: "It's-a me, Mario!\nLet's-a go!"
+
+# Single quotes (literal - no escaping)
+luigi_speech: 'Mama mia! That\'s a big Goomba!'
+
+# Multi-line strings
+bowser_monologue: |
+  Gwahahaha! You'll never save Princess Peach!
+  My fortress is impenetrable!
+  Prepare to face my Koopa army!
+
+# Folded strings (line breaks become spaces)
+game_description: >
+  Super Mario Bros is a platform game where Mario
+  must rescue Princess Peach from Bowser's castle
+  by jumping on enemies and collecting power-ups.
+```
+
+### Numbers (Score System)
+```yaml
+---
+# Integers
+lives_remaining: 3
+coins_collected: 2847
+current_world: 8
+current_level: 4
+
+# Floats
+jump_height: 4.5
+speed_multiplier: 1.75
+
+# Scientific notation
+total_points: 1.23e+6
+
+# Special values
+infinite_lives: .inf
+undefined_score: .nan
+```
+
+### Booleans (Power-Up Status)
+```yaml
+---
+has_super_mushroom: true
+has_fire_flower: false
+is_invincible: True
+can_fly: yes
+underground_level: on
+boss_defeated: off
+```
+
+### Null Values (Missing Items)
+```yaml
+---
+star_power: null
+extra_life: ~
+magic_mushroom: 
+```
+
+## Lists and Arrays (Item Collections)
+
+### Inline Arrays
+```yaml
+---
+power_ups: [mushroom, fire_flower, star, leaf]
+world_names: ["Grass Land", "Desert Land", "Water Land", "Giant Land"]
+```
+
+### Multi-line Arrays
+```yaml
+---
+mario_enemies:
+  - goomba
+  - koopa_troopa
+  - piranha_plant
+  - hammer_bro
+  - lakitu
+  - bowser
+
+security_scan_results:
+  - type: "vulnerability"
+    severity: "high"
+    description: "Hardcoded Koopa shell in config"
+  - type: "misconfiguration" 
+    severity: "medium"
+    description: "Warp pipe left open to public"
+```
+
+## Dictionaries and Objects (Castle Structure)
+
+### Inline Dictionaries
+```yaml
+---
+mario_stats: {strength: 85, speed: 90, jump: 95, lives: 3}
+```
+
+### Nested Dictionaries
+```yaml
+---
+bowsers_castle:
+  location: "World 8-4"
+  difficulty: expert
+  traps:
+    lava_pits: 12
+    moving_platforms: 8
+    fake_bowsers: 7
+  boss:
+    name: "King Bowser"
+    health: 100
+    attacks: ["fire_breath", "ground_pound", "shell_spin"]
+    weakness: "jump_on_head"
+  security:
+    firewall_enabled: true
+    intrusion_detection: active
+    backup_system: "multiple_castles"
+```
+
+## Security Best Practices (Defensive Power-Ups)
+
+### Kubernetes Security Policies
+```yaml
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mario-pod
+  labels:
+    hero: mario
+    game: super-mario-bros
+spec:
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 1001
+    fsGroup: 2000
+  containers:
+  - name: mario-container
+    image: nintendo/mario:latest
+    securityContext:
+      allowPrivilegeEscalation: false
+      readOnlyRootFilesystem: true
+      capabilities:
+        drop:
+        - ALL
+        add:
+        - NET_BIND_SERVICE  # Only for pipe network access
+    env:
+    - name: PRINCESS_LOCATION
+      valueFrom:
+        secretKeyRef:
+          name: castle-secrets
+          key: princess-coordinates
+```
+
+### CI/CD Pipeline Security
+```yaml
+---
+name: "Super Mario Deployment Pipeline"
+on:
+  push:
+    branches: [main, world-*]
+  
+jobs:
+  security_scan:
+    runs-on: mushroom-kingdom-runner
+    steps:
+    - name: "Scan for Koopa Trojan"
+      run: |
+        trivy image nintendo/mario:${{ github.sha }}
+        
+    - name: "Check for hardcoded coins"
+      run: |
+        grep -r "coin.*[0-9]{4,}" . && exit 1 || echo "No hardcoded coins found!"
+        
+    - name: "Validate power-up configurations"
+      run: |
+        yamllint config/power-ups.yml
+        
+  deploy:
+    needs: security_scan
+    environment: production
+    steps:
+    - name: "Deploy to Mushroom Kingdom"
+      env:
+        CASTLE_ACCESS_KEY: ${{ secrets.CASTLE_ACCESS_KEY }}
+        WARP_PIPE_TOKEN: ${{ secrets.WARP_PIPE_TOKEN }}
+      run: |
+        kubectl apply -f k8s/mario-deployment.yml
+```
+
+## Common Security Pitfalls (Avoid These Goombas!)
+
+### What NOT to do:
+```yaml
+---
+# DON'T: Hardcode secrets
+database_password: "princess_peach_123"
+api_key: "sk-bowser-castle-key-123456"
+
+# DON'T: Use latest tags in production
+container_image: "mario/game:latest"
+
+# DON'T: Run as root
+security_context:
+  runAsUser: 0  # This is root Mario - very dangerous!
+
+# DON'T: Allow all privileges
+containers:
+  securityContext:
+    privileged: true  # Bowser's dream come true!
+```
+
+### What TO do:
+```yaml
+---
+# DO: Use environment variables for secrets
+database_password: ${DB_PASSWORD}
+api_key: ${MARIO_API_KEY}
+
+# DO: Pin specific versions
+container_image: "mario/game:v2.1.3"
+
+# DO: Use non-root users
+security_context:
+  runAsUser: 1000
+  runAsNonRoot: true
+
+# DO: Limit privileges
+containers:
+  securityContext:
+    allowPrivilegeEscalation: false
+    readOnlyRootFilesystem: true
+    capabilities:
+      drop: ["ALL"]
+```
+
+## Advanced YAML Features (Special Items)
+
+### Anchors and Aliases (Warp Pipes for Code Reuse)
+```yaml
+---
+# Define an anchor (like placing a warp pipe)
+mario_defaults: &mario_config
+  type: plumber
+  hat_color: red
+  overalls_color: blue
+  special_ability: jump
+
+# Use the alias (warp to the config)
+characters:
+  mario:
+    <<: *mario_config
+    name: "Mario Mario"
+    
+  luigi:
+    <<: *mario_config
+    name: "Luigi Mario"
+    hat_color: green
+    overalls_color: green
+```
+
+### Multi-Document Files (Multiple Worlds)
+```yaml
+---
+# World 1: Grass Land
+world: 1
+theme: grass
+levels: 8
+boss: "King Koopa"
+...
+---
+# World 2: Desert Land
+world: 2
+theme: desert
+levels: 8
+boss: "Desert King"
+...
+```
+
+## Quick Reference Card
+
+| Feature | Example | Security Note |
+|---------|---------|---------------|
+| **Secrets** | `password: ${SECRET}` | Never hardcode! |
+| **Comments** | `# This is secure` | Document security choices |
+| **Multi-line** | `description: \|` | Use for security policies |
+| **Lists** | `- item1` | Validate all entries |
+| **Booleans** | `enabled: true` | Be explicit with security flags |
+| **Null** | `value: null` | Handle missing configs safely |
